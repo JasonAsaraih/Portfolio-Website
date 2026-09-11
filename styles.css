@@ -462,6 +462,10 @@ section {
   align-items: center;
 }
 
+.timeline-item p {
+  text-align: center;
+}
+
 .timeline-item::after {
   content: "";
   position: absolute;
@@ -518,9 +522,9 @@ section {
 .role,
 .degree {
   font-size: 14px;
-  align-self: flex-start;
-  text-align: left;
-  margin-left: 50px;
+  align-self: stretch;
+  margin-left: 0;
+  padding: 0 12px;
 }
 
 .role {

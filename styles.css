@@ -462,6 +462,10 @@ section {
   align-items: center;
 }
 
+.timeline-item p {
+  text-align: center;
+}
+
 .timeline-item::after {
   content: "";
   position: absolute;
@@ -507,6 +511,7 @@ section {
 .timeline-item:nth-child(3) img { animation-delay: 1s; }
 .timeline-item:nth-child(4) img { animation-delay: 1.5s; }
 .timeline-item:nth-child(5) img { animation-delay: 2s; }
+.timeline-item:nth-child(6) img { animation-delay: 2.5s; }
 
 .company {
   margin-bottom: 10px;
@@ -517,9 +522,9 @@ section {
 .role,
 .degree {
   font-size: 14px;
-  align-self: flex-start;
-  text-align: left;
-  margin-left: 50px;
+  align-self: stretch;
+  margin-left: 0;
+  padding: 0 12px;
 }
 
 .role {
@@ -562,4 +567,9 @@ footer {
 
   padding: 20px 10%;
   border: 3px solid #fff;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
 }

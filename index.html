@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jason Asariah | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="bg-image-container" id="bg-image"></div>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">
+        <img src="MiscMedia/profile.jpg" alt="Profile">
+        <h1>Jason Asariah</h1>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#footer">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h2>Hi, I'm Jason Asariah</h2>
+    <p>Electrical & Computer Engineering Student | Robotics | Aerospace</p>
+    <a href="#experience" class="btn">View My Work</a>
+  </div>
+
+
+<section id="about">
+  <h2>About</h2>
+
+  <div class="about-container">
+
+    <img src="MiscMedia/profile.jpg" alt="Profile" class="about-img">
+
+    <div class="about-grid">
+
+      <div class="about-card">
+        <h3>Electrical Engineering</h3>
+        <p>
+          I have experience designing and building electrical systems across robotics,
+          aerospace, and product development, including schematic and wiring harness
+          design at SpaceX, PCB and protection circuit design at Bourns, and leading
+          custom sensing systems.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3>Computer Science</h3>
+        <p>
+          I am an Electrical and Computer Engineering student with strong computer 
+          science experience in embedded systems, robotics, and machine learning. 
+          I use C++, Python, and MATLAB to build autonomous systems, integrate sensors, 
+          and develop predictive models.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3>Leadership</h3>
+        <p>
+          I lead engineering teams as Vice President of the CBU Robotics team and 
+          mentor students through teaching, tutoring, and competition coaching, 
+          developing leadership, technical communication, and collaboration skills 
+          while guiding teams to successfully design and build complex engineering systems.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- Experience -->
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <p class="company">California Baptist University</p>
+      <img src="MiscMedia/CBU.jpg"
+        data-bg="MiscMedia/CBU-bg.jpg"
+        data-filter="CBU"
+        class="timeline-logo">
+      <p>Fall 2023 - Spring 2027</p>
+      <p class="degree">B.S in Electrical & Computer Engineering</p>
+      <p class="role">Circuit Theory and Physics Tutor | Teaching Assistance | 
+        Machine Learning Researcher | Biomedical Engineering Researcher | Lab Instructor | FLL Coach</p>
+
+    </div>
+
+    <div class="timeline-item">
+      <p class="company">CBU Robotics Team</p>
+      <img src="MiscMedia/CBUcompthumbnail2026.png"
+        data-bg="MiscMedia/Robotics-bg.png"
+        data-filter="CBU Robotics"
+        class="timeline-logo">
+      <p>Fall 2023 - Present</p>
+      <p class="role">VP / Senior Electrical Lead</p>
+    </div>
+
+    <div class="timeline-item">
+      <p class="company">Bourns Inc.</p>
+      <img src="MiscMedia/Bourns.jpg"
+        data-bg="MiscMedia/Bourns-bg.jpg"
+        data-filter="Bourns"
+        class="timeline-logo">
+      <p>Summer of 2024</p>
+      <p class="role">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Engineering Intern</p>
+    </div>
+
+    <div class="timeline-item">
+      <p class="company">SpaceX</p>
+      <img src="MiscMedia/SpaceX.jpg"
+        data-bg="MiscMedia/SpaceX-bg.jpg"
+        data-filter="SpaceX"
+        class="timeline-logo">
+      <p>Summer of 2025</p>
+      <p class="role">Avionics Engineering Intern</p>
+    </div>
+
+    <div class="timeline-item">
+      <p class="company">SpaceX</p>
+      <img src="MiscMedia/SpaceX.jpg"
+        data-bg="MiscMedia/SpaceX-starshield-bg.webp"
+        data-filter="SpaceX"
+        class="timeline-logo">      <p>Summer of 2026</p>
+      <p class="role">Electrical Engineering Intern</p>
+
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- Projects -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <!-- FILTER BUTTONS -->
+  <div class="filters">
+
+    <!-- CLEAR BUTTON -->
+    <div class="filter-row">
+      <button onclick="filterProjects('all')" class="clear-btn">Show All</button>
+    </div>
+
+    <!-- ROW 1 -->
+    <div class="filter-row">
+      <button onclick="filterProjects('Personal')">Personal</button>
+      <button onclick="filterProjects('CBU')">CBU</button>
+      <button onclick="filterProjects('CBU Robotics')">CBU Robotics</button>
+      <button onclick="filterProjects('SpaceX')">SpaceX</button>
+      <button onclick="filterProjects('Bourns')">Bourns</button>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="filter-row">
+      <button onclick="filterProjects('Electrical Engineering')">Electrical Engineering</button>
+      <button onclick="filterProjects('Computer Science')">Computer Science</button>
+      <button onclick="filterProjects('Mechanical Engineering')">Mechanical Engineering</button>
+    </div>
+
+  </div>
+
+  </div>
+    <div class="projects" id="projects-container"></div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer">
+
+    <p>
+      <img src="MiscMedia/mail.png" alt="Email" class="email-icon">
+      JasonSean.Asariah@calbaptist.edu
+    </p>
+    <p>© 2026 Jason Asariah</p>
+
+    </div>
+
+  </footer>
+
+  <!-- Link JS -->
+  <script src="projects.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

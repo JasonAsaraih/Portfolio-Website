@@ -67,7 +67,7 @@ const projects = [
     tags: ["Machine Learning", "Computer Science", "CBU"],
     image: "Projects/gis.png",
     description: "Developed ML models for geospatial tweet data analysis.",
-    link: "projects/pcb.html"
+    link: "https://aisel.aisnet.org/amcis2025/intelfuture/intelfuture/27/"
   },
   {
     title: "Passive Exoskeleton",
@@ -159,4 +159,4 @@ const projects = [
 // add notes and sources for spacex ones that none is specific 
 // KILL ALL NEW HTML PAGES
 // HEADER JUST JUMPS DOWN TO sections
-// pressing experience just 
+// pressing experience just

@@ -269,10 +269,13 @@ section {
 }
 
 .project-card {
+  display: block;
   background: #000;
   border: 2px solid #fff;
   border-radius: 10px;
+  color: inherit;
   overflow: hidden;
+  text-decoration: none;
   transition: 0.3s;
 }
 

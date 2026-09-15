@@ -39,10 +39,15 @@ const container = document.getElementById("projects-container");
 
 if (container) {
   projects.forEach(project => {
-    const card = document.createElement("div");
+    const isExternalProject = project.link.startsWith("http");
+    const card = document.createElement(isExternalProject ? "a" : "div");
     card.classList.add("project-card");
 
     card.dataset.tags = project.tags.join(',');
+
+    if (isExternalProject) {
+      card.href = project.link;
+    }
 
     card.innerHTML = `
       <img src="${project.image}" />

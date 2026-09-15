@@ -433,6 +433,15 @@ section {
     left: -3px;  /* moves it left */
 }
 
+.phone-icon {
+    width: 24px;
+    height: auto;
+
+    position: relative;
+    top: 6px;    /* moves it down */
+    left: -3px;  /* moves it left */
+}
+
 /* =========================
    TIMELINE
 ========================= */

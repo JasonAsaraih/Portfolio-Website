@@ -420,6 +420,16 @@ section {
   background: #fff;
   color: #000;
 }
+
+.linkedin-icon {
+    width: 24px;
+    height: auto;
+
+    position: relative;
+    top: 8px;    /* moves it down */
+    left: -3px;  /* moves it left */
+}
+
 /* =========================
    TIMELINE
 ========================= */

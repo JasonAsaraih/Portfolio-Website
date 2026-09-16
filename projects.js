@@ -53,14 +53,14 @@ const projects = [
     tags: ["Bourns"],
     image: "Projects/tco.png",
     description: "Designed applications using thermal protection components.",
-    link: "experience/bourns.html"
+    link: "https://www.bourns.com/"
   },
   {
     title: "High voltage Component Packaging",
     tags: ["Bourns"],
     image: "Projects/gdt.png",
     description: "Worked on high voltage protection component packaging.",
-    link: "experience/bourns.html"
+    link: "https://www.bourns.com/"
   },
   {
     title: "NLP and DNNs on Tweet Datasets",
@@ -116,7 +116,7 @@ const projects = [
     tags: ["SpaceX"],
     image: "Projects/dragon.jpg",
     description: "Worked on avionics systems for spacecraft.",
-    link: "experience/spacex-dragon.html"
+    link: "https://www.spacex.com/"
   },
   {
     title: "4th order Butterworth Low-Pass Filter",
@@ -151,6 +151,6 @@ const projects = [
     tags: ["SpaceX"],
     image: "Projects/Starshield.webp",
     description: "Contributed to electrical engineering work supporting the Starshield program.",
-    link: "experience/spacex-starshield.html"
+    link: "https://www.spacex.com/"
   }
 ];

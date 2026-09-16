@@ -15,7 +15,7 @@ const projects = [
   },
   {
     title: "Snake-Like Robot",
-    tags: ["Personal"],
+    tags: ["Personal", "Computer Science"],
     image: "Projects/Snake.png",
     description: "Developed software, electrical, and mechanical systems of snake-like robot.",
     link: "projects/pcb.html"
@@ -127,7 +127,7 @@ const projects = [
   },
   {
     title: "Tuning a PI Control System",
-    tags: [],
+    tags: ["Computer Science"],
     image: "Projects/pi.png",
     description: "Designed and tuned PI control system.",
     link: "projects/pcb.html"

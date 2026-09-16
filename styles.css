@@ -528,6 +528,14 @@ section {
   transform: translateY(-10px) scale(1.05);
 }
 
+.timeline-link {
+  display: inline-flex;
+  position: relative;
+  z-index: 2;
+  border-radius: 10%;
+  outline-offset: 5px;
+}
+
 .timeline-item:nth-child(1) img { animation-delay: 0s; }
 .timeline-item:nth-child(2) img { animation-delay: 0.5s; }
 .timeline-item:nth-child(3) img { animation-delay: 1s; }
@@ -580,6 +588,182 @@ footer {
   padding: 20px;
   background: #000;
   color: #fff;
+}
+
+/* =========================
+   PROJECT / EXPERIENCE DETAIL PAGES
+========================= */
+
+.detail-page {
+  background:
+    radial-gradient(circle at 85% 18%, rgba(37, 99, 235, 0.2), transparent 28rem),
+    #05070b;
+}
+
+.detail-page header {
+  border-bottom: 1px solid #1e293b;
+  background: rgba(5, 7, 11, 0.9);
+}
+
+.detail-hero {
+  padding-top: 64px;
+}
+
+.back-link {
+  display: inline-flex;
+  gap: 8px;
+  margin-bottom: 42px;
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.back-link:hover,
+.detail-page footer a {
+  color: #fff;
+}
+
+.detail-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  align-items: center;
+  gap: clamp(40px, 7vw, 100px);
+}
+
+.eyebrow,
+.section-label {
+  margin-bottom: 12px;
+  color: #60a5fa;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.detail-hero h2 {
+  max-width: 760px;
+  margin-bottom: 22px;
+  font-size: clamp(2.7rem, 6vw, 5.5rem);
+  line-height: 0.98;
+  text-align: left;
+  letter-spacing: -0.055em;
+}
+
+.detail-summary {
+  max-width: 680px;
+  color: #cbd5e1;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+}
+
+.detail-hero-grid > img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px solid #334155;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.45);
+}
+
+.detail-source {
+  margin-top: 24px;
+}
+
+.detail-content {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  padding-top: 40px;
+}
+
+.detail-copy,
+.detail-panel,
+.detail-skills {
+  border: 1px solid #263244;
+  border-radius: 16px;
+  background: rgba(11, 16, 25, 0.82);
+}
+
+.detail-copy,
+.detail-panel {
+  padding: clamp(25px, 4vw, 46px);
+}
+
+.detail-copy h2,
+.detail-panel h2,
+.detail-skills h2,
+.related-work h2 {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.detail-copy > p:last-of-type,
+.detail-panel li {
+  color: #b7c2d3;
+}
+
+.detail-panel ul {
+  padding-left: 20px;
+}
+
+.detail-panel li + li {
+  margin-top: 15px;
+}
+
+.detail-skills {
+  grid-column: 1 / -1;
+  padding: 28px;
+}
+
+.detail-skills > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.detail-skills span {
+  padding: 8px 13px;
+  border: 1px solid #3b4b62;
+  border-radius: 999px;
+  color: #dbeafe;
+  background: #101827;
+}
+
+.detail-note {
+  margin-top: 24px;
+  padding: 16px 18px;
+  border-left: 3px solid #60a5fa;
+  color: #9fb0c7;
+  background: #0b1422;
+}
+
+.related-work {
+  padding-top: 10px;
+}
+
+.related-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.related-links a {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.related-links a:hover {
+  border-color: #60a5fa;
+  transform: translateY(-3px);
+}
+
+.detail-page footer {
+  border-top: 1px solid #1e293b;
+  color: #94a3b8;
 }
 
 .footer {
@@ -745,6 +929,36 @@ footer {
     padding: 18px;
   }
 
+  .detail-page header nav {
+    position: static;
+    display: none;
+  }
+
+  .detail-hero {
+    padding-top: 36px;
+  }
+
+  .back-link {
+    margin-bottom: 30px;
+  }
+
+  .detail-hero-grid,
+  .detail-content {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-hero-grid {
+    gap: 32px;
+  }
+
+  .detail-hero h2 {
+    font-size: clamp(2.4rem, 13vw, 4rem);
+  }
+
+  .detail-hero-grid > img {
+    aspect-ratio: 16 / 10;
+  }
+
   .timeline {
     display: grid;
     margin-top: 28px;
@@ -774,10 +988,13 @@ footer {
   }
 
   .timeline-item img {
-    grid-column: 1;
-    grid-row: 1 / span 4;
     width: 68px;
     height: 68px;
+  }
+
+  .timeline-item .timeline-link {
+    grid-column: 1;
+    grid-row: 1 / span 4;
   }
 
   .timeline-item::after {

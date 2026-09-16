@@ -45,15 +45,12 @@ const container = document.getElementById("projects-container");
 
 if (container) {
   projects.forEach(project => {
-    const isExternalProject = project.link.startsWith("http");
-    const card = document.createElement(isExternalProject ? "a" : "div");
+    const card = document.createElement("a");
     card.classList.add("project-card");
 
     card.dataset.tags = project.tags.join(',');
 
-    if (isExternalProject) {
-      card.href = project.link;
-    }
+    card.href = project.link;
 
     card.innerHTML = `
       <img src="${project.image}" alt="${project.title} project preview" loading="lazy" />
@@ -64,29 +61,6 @@ if (container) {
     container.appendChild(card);
   });
 }
-document.querySelectorAll('.timeline-logo').forEach(img => {
-  const showRelatedProjects = () => {
-    const category = img.getAttribute('data-filter');
-
-    // 1. Scroll to projects
-    const projectsSection = document.getElementById('projects');
-    projectsSection.scrollIntoView({ behavior: 'smooth' });
-
-    // 2. Wait for scroll, then filter
-    setTimeout(() => {
-      filterProjects(category);
-    }, 400); // small delay so it feels smooth
-  };
-
-  img.addEventListener('click', showRelatedProjects);
-  img.addEventListener('keydown', event => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      showRelatedProjects();
-    }
-  });
-});
-
 const navToggle = document.querySelector('.nav-toggle');
 const primaryNav = document.getElementById('primary-nav');
 

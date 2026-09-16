@@ -20,6 +20,12 @@ h2 {
   text-align: center;
 }
 
+/* Keep all photographic media within the black-and-white palette. */
+img,
+.hero {
+  filter: grayscale(100%);
+}
+
 /* =========================
    HEADER / NAV / LOGO
 ========================= */
@@ -59,7 +65,7 @@ header h1 {
 nav a {
   margin-left: 20px;
   text-decoration: none;
-  color: #94a3b8;
+  color: #fff;
   transition: 0.3s;
 }
 
@@ -112,7 +118,7 @@ nav a:hover {
 }
 
 .hero p {
-  color: #94a3b8;
+  color: #fff;
   margin-bottom: 20px;
 }
 
@@ -154,7 +160,7 @@ nav a:hover {
   opacity: 0;
   transition: opacity 0.7s ease;
 
-  filter: grayscale(60%) brightness(40%);
+  filter: grayscale(100%) brightness(40%);
 }
 
 .bg-image-container::after {
@@ -291,7 +297,7 @@ section {
 
 .project-card p {
   padding: 0 10px 15px;
-  color: #94a3b8;
+  color: #fff;
 }
 
 .project-card:hover {
@@ -353,7 +359,7 @@ section {
 }
 
 .about-container p {
-  color: #94a3b8;
+  color: #fff;
 }
 
 .about-list {
@@ -387,7 +393,7 @@ section {
 }
 
 .about-card p {
-  color: #94a3b8;
+  color: #fff;
 }
 
 /*project stuff*/
@@ -495,7 +501,7 @@ section {
   left: 70%;
   width: 60%;
   height: 2px;
-  background: #464849;
+  background: #fff;
   z-index: 0;
 }
 
@@ -558,7 +564,7 @@ section {
 }
 
 .role {
-  color: #94a3b8;
+  color: #fff;
 }
 
 .degree {
@@ -595,14 +601,7 @@ footer {
 ========================= */
 
 .detail-page {
-  background:
-    radial-gradient(circle at 85% 18%, rgba(37, 99, 235, 0.2), transparent 28rem),
-    #05070b;
-}
-
-.detail-page header {
-  border-bottom: 1px solid #1e293b;
-  background: rgba(5, 7, 11, 0.9);
+  background: #000;
 }
 
 .detail-hero {
@@ -613,7 +612,7 @@ footer {
   display: inline-flex;
   gap: 8px;
   margin-bottom: 42px;
-  color: #94a3b8;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -632,7 +631,7 @@ footer {
 .eyebrow,
 .section-label {
   margin-bottom: 12px;
-  color: #60a5fa;
+  color: #fff;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -650,14 +649,14 @@ footer {
 
 .detail-summary {
   max-width: 680px;
-  color: #cbd5e1;
+  color: #fff;
   font-size: clamp(1.05rem, 2vw, 1.35rem);
 }
 
 .detail-hero-grid > img {
   width: 100%;
   aspect-ratio: 4 / 3;
-  border: 1px solid #334155;
+  border: 1px solid #fff;
   border-radius: 18px;
   object-fit: cover;
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.45);
@@ -677,9 +676,9 @@ footer {
 .detail-copy,
 .detail-panel,
 .detail-skills {
-  border: 1px solid #263244;
+  border: 1px solid #fff;
   border-radius: 16px;
-  background: rgba(11, 16, 25, 0.82);
+  background: #000;
 }
 
 .detail-copy,
@@ -697,7 +696,7 @@ footer {
 
 .detail-copy > p:last-of-type,
 .detail-panel li {
-  color: #b7c2d3;
+  color: #fff;
 }
 
 .detail-panel ul {
@@ -721,18 +720,18 @@ footer {
 
 .detail-skills span {
   padding: 8px 13px;
-  border: 1px solid #3b4b62;
+  border: 1px solid #fff;
   border-radius: 999px;
-  color: #dbeafe;
-  background: #101827;
+  color: #fff;
+  background: #000;
 }
 
 .detail-note {
   margin-top: 24px;
   padding: 16px 18px;
-  border-left: 3px solid #60a5fa;
-  color: #9fb0c7;
-  background: #0b1422;
+  border-left: 3px solid #fff;
+  color: #fff;
+  background: #000;
 }
 
 .related-work {
@@ -749,7 +748,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  border: 1px solid #334155;
+  border: 1px solid #fff;
   border-radius: 12px;
   color: #fff;
   text-decoration: none;
@@ -757,13 +756,13 @@ footer {
 }
 
 .related-links a:hover {
-  border-color: #60a5fa;
+  border-color: #fff;
   transform: translateY(-3px);
 }
 
 .detail-page footer {
-  border-top: 1px solid #1e293b;
-  color: #94a3b8;
+  border-top: 1px solid #fff;
+  color: #fff;
 }
 
 .footer {
@@ -788,7 +787,7 @@ footer {
   width: 44px;
   height: 44px;
   padding: 10px;
-  border: 1px solid #475569;
+  border: 1px solid #fff;
   border-radius: 8px;
   background: transparent;
   cursor: pointer;
@@ -854,7 +853,7 @@ footer {
     display: grid;
     padding: 8px 5% 16px;
     background: rgba(0, 0, 0, 0.97);
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid #fff;
     transform: translateY(-8px);
     opacity: 0;
     visibility: hidden;
@@ -872,7 +871,7 @@ footer {
     display: flex;
     align-items: center;
     margin: 0;
-    border-bottom: 1px solid #1e293b;
+    border-bottom: 1px solid #fff;
   }
 
   .hero {
@@ -927,11 +926,6 @@ footer {
 
   .about-card {
     padding: 18px;
-  }
-
-  .detail-page header nav {
-    position: static;
-    display: none;
   }
 
   .detail-hero {

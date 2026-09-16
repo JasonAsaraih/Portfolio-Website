@@ -22,14 +22,14 @@ const projects = [
   },
   {
     title: "CNN For Element Detection",
-    tags: ["Computer Science", "CBU Robotics"],
+    tags: ["CBU Robotics"],
     image: "Projects/CNN.png",
     description: "Developed CNN model to detect game elements using YOLO.",
     link: "projects/pcb.html"
   },
   {
     title: "Portfolio Website",
-    tags: ["Computer Science"],
+    tags: [],
     image: "Projects/website.png",
     description: "Developed personal portfolio website.",
     link: "projects/pcb.html"
@@ -64,7 +64,7 @@ const projects = [
   },
   {
     title: "NLP and DNNs on Tweet Datasets",
-    tags: ["Machine Learning", "Computer Science", "CBU"],
+    tags: ["Machine Learning", "CBU"],
     image: "Projects/gis.png",
     description: "Developed ML models for geospatial tweet data analysis.",
     link: "https://aisel.aisnet.org/amcis2025/intelfuture/intelfuture/27/"
@@ -78,7 +78,7 @@ const projects = [
   },
   {
     title: "Game in C++",
-    tags: ["Computer Science"],
+    tags: [],
     image: "Projects/astro.png",
     description: "Developed a game using C++.",
     link: "projects/pcb.html"
@@ -106,7 +106,7 @@ const projects = [
   },
   {
     title: "MNIST Demo",
-    tags: ["Machine Learning", "Computer Science"],
+    tags: ["Machine Learning"],
     image: "Projects/mnist.png",
     description: "Neural network trained on MNIST dataset.",
     link: "projects/pcb.html"

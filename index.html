@@ -9,25 +9,29 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body id="top">
   <div class="bg-image-container" id="bg-image"></div>
 
   <!-- Navbar -->
   <header>
-    <div class="logo">
+    <a class="logo" href="#top" aria-label="Jason Asariah home">
         <img src="MiscMedia/profile.jpg" alt="Profile">
         <h1>Jason Asariah</h1>
-    </div>
-    <nav>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="primary-nav" aria-label="Primary navigation">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
-      <a href="MiscMedia/JasonAsariahResume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      <a href="MiscMedia/Jason_Asariah_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       <a href="#footer">Contact</a>
     </nav>
   </header>
 
   <!-- Hero -->
+  <main>
   <div class="hero">
     <h2>Hi, I'm Jason Asariah</h2>
     <p>Electrical & Computer Engineering Student | Robotics | Aerospace</p>
@@ -90,7 +94,7 @@
       <img src="MiscMedia/CBU.jpg"
         data-bg="MiscMedia/CBU-bg.jpg"
         data-filter="CBU"
-        class="timeline-logo">
+        class="timeline-logo" alt="California Baptist University logo" tabindex="0" role="button" aria-label="Show California Baptist University projects">
       <p>Fall 2023 - Spring 2027</p>
       <p class="degree">B.S in Electrical & Computer Engineering</p>
       <p class="role">Circuit Theory and Physics Tutor | Teaching Assistance | 
@@ -103,7 +107,7 @@
       <img src="MiscMedia/CBUcompthumbnail2026.png"
         data-bg="MiscMedia/Robotics-bg.png"
         data-filter="CBU Robotics"
-        class="timeline-logo">
+        class="timeline-logo" alt="CBU Robotics Team logo" tabindex="0" role="button" aria-label="Show CBU Robotics projects">
       <p>Fall 2023 - Spring 2026</p>
       <p class="role">VP / Senior Electrical Lead</p>
     </div>
@@ -113,7 +117,7 @@
       <img src="MiscMedia/Bourns.jpg"
         data-bg="MiscMedia/Bourns-bg.jpg"
         data-filter="Bourns"
-        class="timeline-logo">
+        class="timeline-logo" alt="Bourns logo" tabindex="0" role="button" aria-label="Show Bourns projects">
       <p>Summer of 2024</p>
       <p class="role">Engineering Intern</p>
     </div>
@@ -123,7 +127,7 @@
       <img src="MiscMedia/SpaceX.jpg"
         data-bg="MiscMedia/SpaceX-bg.jpg"
         data-filter="SpaceX"
-        class="timeline-logo">
+        class="timeline-logo" alt="SpaceX logo" tabindex="0" role="button" aria-label="Show SpaceX projects">
       <p>Summer of 2025</p>
       <p class="role">Avionics Engineering Intern</p>
     </div>
@@ -133,7 +137,7 @@
       <img src="MiscMedia/SpaceX.jpg"
         data-bg="MiscMedia/SpaceX-starshield-bg.webp"
         data-filter="SpaceX"
-        class="timeline-logo">      <p>Summer of 2026</p>
+        class="timeline-logo" alt="SpaceX logo" tabindex="0" role="button" aria-label="Show SpaceX projects">      <p>Summer of 2026</p>
       <p class="role">Electrical Engineering Intern</p>
 
 
@@ -144,7 +148,7 @@
       <img src="MiscMedia/CBUcompthumbnail2026.png"
         data-bg="MiscMedia/Robotics-bg.png"
         data-filter="CBU Robotics"
-        class="timeline-logo">
+        class="timeline-logo" alt="CBU Robotics Team logo" tabindex="0" role="button" aria-label="Show CBU Robotics projects">
       <p>Summer 2026 - Present</p>
       <p class="role">President</p>
     </div>
@@ -182,18 +186,18 @@
 
   </div>
 
-  </div>
-    <div class="projects" id="projects-container"></div>
+    <div class="projects" id="projects-container" aria-live="polite"></div>
 
   </section>
+</main>
 
   <!-- Footer -->
   <footer id="footer">
     <div class="footer">
 
     <p>
-      <img src="MiscMedia/mail.png" alt="Email" class="email-icon">
-      JasonSean.Asariah@calbaptist.edu
+      <img src="MiscMedia/Mail.png" alt="Email" class="email-icon">
+      <a href="mailto:JasonSean.Asariah@calbaptist.edu">JasonSean.Asariah@calbaptist.edu</a>
     </p>
     <p>
       <img src="MiscMedia/linkedin.webp" alt="LinkedIn" class="linkedin-icon">
@@ -204,7 +208,7 @@
     
     <p class="phone-contact">
       <img src="MiscMedia/phone.webp" alt="Phone" class="phone-icon">
-      <span>(951) 594-1013</span>
+      <a href="tel:+19515941013">(951) 594-1013</a>
     </p>
 
     </div>

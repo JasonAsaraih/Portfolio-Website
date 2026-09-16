@@ -20,6 +20,12 @@ h2 {
   text-align: center;
 }
 
+/* Keep all photographic media within the black-and-white palette. */
+img,
+.hero {
+  filter: grayscale(100%);
+}
+
 /* =========================
    HEADER / NAV / LOGO
 ========================= */
@@ -153,6 +159,8 @@ nav a:hover {
 
   opacity: 0;
   transition: opacity 0.7s ease;
+
+  filter: grayscale(100%) brightness(40%);
 }
 
 .bg-image-container::after {

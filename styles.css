@@ -590,3 +590,267 @@ footer {
   padding: 20px 10%;
   border: 3px solid #fff;
 }
+
+/* =========================
+   RESPONSIVE / MOBILE
+========================= */
+.logo {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  margin: 5px 0;
+  border-radius: 2px;
+  background: #fff;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.filters button.active {
+  background: #fff;
+  color: #000;
+}
+
+.footer a {
+  color: #fff;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  header {
+    min-height: 68px;
+    padding: 9px 5%;
+  }
+
+  header h1 {
+    font-size: 17px;
+  }
+
+  .logo img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .nav-toggle {
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: grid;
+    padding: 8px 5% 16px;
+    background: rgba(0, 0, 0, 0.97);
+    border-bottom: 1px solid #334155;
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease;
+  }
+
+  nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  nav a {
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    border-bottom: 1px solid #1e293b;
+  }
+
+  .hero {
+    min-height: calc(100svh - 68px);
+    height: auto;
+    padding: 64px 7% 80px;
+    background-position: 62% center;
+  }
+
+  .hero h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1.1;
+  }
+
+  .hero p {
+    max-width: 30rem;
+    font-size: 1rem;
+  }
+
+  .btn {
+    min-height: 46px;
+    padding: 9px 20px;
+  }
+
+  section {
+    padding: 60px 5%;
+    scroll-margin-top: 68px;
+  }
+
+  section > h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .about-img {
+    width: min(100%, 280px);
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .about-grid,
+  .projects,
+  .projects-grid {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .about-card {
+    padding: 18px;
+  }
+
+  .timeline {
+    display: grid;
+    margin-top: 28px;
+    gap: 0;
+  }
+
+  .timeline-item {
+    min-height: 150px;
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+    column-gap: 18px;
+    align-content: start;
+    align-items: start;
+    padding-bottom: 28px;
+  }
+
+  .timeline-item .company,
+  .timeline-item > p:not(.company) {
+    grid-column: 2;
+    text-align: left;
+    padding: 0;
+  }
+
+  .timeline-item .company {
+    margin: 0;
+    font-size: 1.05rem;
+  }
+
+  .timeline-item img {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    width: 68px;
+    height: 68px;
+  }
+
+  .timeline-item::after {
+    top: 70px;
+    bottom: 0;
+    left: 33px;
+    width: 2px;
+    height: auto;
+  }
+
+  .filters {
+    margin: 20px -1% 24px;
+  }
+
+  .filter-row,
+  .filter-row:first-child {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+
+  .filters button {
+    min-height: 44px;
+    margin: 4px;
+    padding: 8px 12px;
+    font-size: 0.88rem;
+    border-radius: 22px;
+  }
+
+  .project-card img {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
+
+  footer {
+    padding: 12px 5% 24px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 20px 16px;
+    border-width: 2px;
+    border-radius: 10px;
+  }
+
+  .footer p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 380px) {
+  header h1 { font-size: 15px; }
+  .logo { gap: 7px; }
+  .filters button { font-size: 0.8rem; }
+}
+
+@media (hover: none) {
+  .timeline-item img { animation: none; }
+  .timeline-item img:hover { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

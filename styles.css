@@ -246,7 +246,6 @@ section {
 }
 
 .projects {
-  /* Keep filtered results aligned to the same four-column card tracks. */
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
@@ -295,21 +294,6 @@ section {
 
 .project-card:hover {
   transform: translateY(-5px) scale(1.02);
-}
-
-/* FILTER BUTTONS */
-.filters {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.filters button {
-  margin: 5px;
-  padding: 8px 16px;
-  background: #000;
-  color: #fff;
-  border: 2px solid #fff;
-  cursor: pointer;
 }
 
 /* =========================
@@ -387,40 +371,6 @@ section {
 
 .about-card p {
   color: #fff;
-}
-
-/*project stuff*/
-.filter-row {
-  margin-bottom: 10px;
-}
-
-.filters button {
-  margin: 6px;
-  padding: 8px 14px;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.filters button:hover {
-  background: #fff;
-  color: #000;
-}
-
-.clear-btn {
-  border: 2px solid #fff;
-  background: transparent;
-  color: #fff;
-  
-}
-
-.filter-row:first-child {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.clear-btn:hover {
-  background: #fff;
-  color: #000;
 }
 
 .linkedin-icon {
@@ -842,11 +792,6 @@ footer {
   transition: transform 0.25s ease, opacity 0.2s ease;
 }
 
-.filters button.active {
-  background: #fff;
-  color: #000;
-}
-
 .footer a {
   color: #fff;
   overflow-wrap: anywhere;
@@ -1040,26 +985,6 @@ footer {
     height: auto;
   }
 
-  .filters {
-    margin: 20px -1% 24px;
-  }
-
-  .filter-row,
-  .filter-row:first-child {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 4px;
-  }
-
-  .filters button {
-    min-height: 44px;
-    margin: 4px;
-    padding: 8px 12px;
-    font-size: 0.88rem;
-    border-radius: 22px;
-  }
-
   .project-card img {
     height: auto;
     aspect-ratio: 16 / 10;
@@ -1090,7 +1015,6 @@ footer {
 @media (max-width: 380px) {
   header h1 { font-size: 15px; }
   .logo { gap: 7px; }
-  .filters button { font-size: 0.8rem; }
 }
 
 @media (hover: none) {

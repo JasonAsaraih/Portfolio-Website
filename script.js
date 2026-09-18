@@ -15,26 +15,6 @@ document.querySelectorAll('.timeline-logo').forEach(img => {
 
 });
 
-function filterProjects(category) {
-  const projects = document.querySelectorAll('.project-card');
-
-  projects.forEach(project => {
-    const tags = project.dataset.tags.split(',');
-
-    if (category === 'all' || tags.includes(category)) {
-      project.style.display = 'block';
-    } else {
-      project.style.display = 'none';
-    }
-  });
-
-  document.querySelectorAll('.filters button').forEach(button => {
-    const isActive = button.dataset.category === category;
-    button.classList.toggle('active', isActive);
-    button.setAttribute('aria-pressed', isActive);
-  });
-}
-
 document.querySelectorAll('.timeline-logo').forEach(img => {
   img.addEventListener('mouseenter', () => {
     img.classList.add('stopped'); // stops animation forever
@@ -47,8 +27,6 @@ if (container) {
   projects.forEach(project => {
     const card = document.createElement("a");
     card.classList.add("project-card");
-
-    card.dataset.tags = project.tags.join(',');
 
     card.href = project.link;
 
@@ -90,12 +68,3 @@ if (navToggle && primaryNav) {
     if (window.innerWidth > 760) closeNavigation();
   });
 }
-
-document.querySelectorAll('.filters button').forEach(button => {
-  const match = button.getAttribute('onclick')?.match(/'([^']+)'/);
-  if (match) {
-    button.dataset.category = match[1];
-    button.setAttribute('aria-pressed', match[1] === 'all');
-    button.classList.toggle('active', match[1] === 'all');
-  }
-});

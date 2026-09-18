@@ -1,6 +1,20 @@
 const projects = [
+    {
+    title: "Starshield",
+    tags: ["SpaceX"],
+    image: "Projects/Starshield.webp",
+    description: "Contributed to electrical engineering work supporting the Starshield program.",
+    link: "experience/spacex-starshield.html#starshield-projects"
+  },
+    {
+    title: "Dragon Avionics Program Projects",
+    tags: ["SpaceX"],
+    image: "Projects/dragon.jpg",
+    description: "Worked on avionics systems for spacecraft.",
+    link: "experience/spacex-dragon.html#dragon-projects"
+  },
   {
-    title: "CubeSat Project",
+    title: "CubeSat",
     tags: ["CBU"],
     image: "Projects/CubeSat.png",
     description: "Designing Attitude Determination Card and Electrical Power System PCBs for a 1U CubeSat.",
@@ -21,18 +35,11 @@ const projects = [
     link: "projects/snake-robot.html"
   },
   {
-    title: "CNN For Element Detection",
-    tags: ["CBU Robotics"],
-    image: "Projects/CNN.png",
-    description: "Developed CNN model to detect game elements using YOLO.",
-    link: "projects/cnn-element-detection.html"
-  },
-  {
-    title: "Portfolio Website",
-    tags: [],
-    image: "Projects/website.png",
-    description: "Developed personal portfolio website.",
-    link: "projects/portfolio-website.html"
+    title: "Headset for Visually Impaired",
+    tags: ["Personal"],
+    image: "Projects/Headset.png",
+    description: "Assistive headset system for visually impaired users.",
+    link: "projects/assistive-headset.html"
   },
   {
     title: "EMG Controlled Car",
@@ -40,13 +47,6 @@ const projects = [
     image: "Projects/EMG.png",
     description: "Developed EMG-based control system for a remote controlled car.",
     link: "projects/emg-car.html"
-  },
-  {
-    title: "Headset for Visually Impaired",
-    tags: ["Personal"],
-    image: "Projects/Headset.png",
-    description: "Assistive headset system for visually impaired users.",
-    link: "projects/assistive-headset.html"
   },
   {
     title: "Thermal Protection Component Application Design",
@@ -61,6 +61,13 @@ const projects = [
     image: "Projects/gdt.png",
     description: "Worked on high voltage protection component packaging.",
     link: "experience/bourns.html#high-voltage-packaging"
+  },
+  {
+    title: "CNN For Element Detection",
+    tags: ["CBU Robotics"],
+    image: "Projects/CNN.png",
+    description: "Developed CNN model to detect game elements using YOLO.",
+    link: "projects/cnn-element-detection.html"
   },
   {
     title: "NLP and DNNs on Tweet Datasets",
@@ -84,25 +91,11 @@ const projects = [
     link: "projects/cpp-game.html"
   },
   {
-    title: "Arsenal V1",
+    title: "Arsenal PCB",
     tags: ["CBU Robotics"],
     image: "Projects/noimg.png",
     description: "Custom electronics system for robotics platform.",
     link: "projects/arsenal-v1.html"
-  },
-  {
-    title: "Arsenal V2.5",
-    tags: ["CBU Robotics"],
-    image: "Projects/noimg.png",
-    description: "Improved robotics electronics architecture.",
-    link: "projects/arsenal-v25.html"
-  },
-  {
-    title: "Arsenal V3",
-    tags: ["CBU Robotics"],
-    image: "Projects/noimg.png",
-    description: "Advanced robotics sensing and control system.",
-    link: "projects/arsenal-v3.html"
   },
   {
     title: "MNIST Demo",
@@ -110,47 +103,5 @@ const projects = [
     image: "Projects/mnist.png",
     description: "Neural network trained on MNIST dataset.",
     link: "projects/mnist-demo.html"
-  },
-  {
-    title: "Dragon Avionics Program Projects",
-    tags: ["SpaceX"],
-    image: "Projects/dragon.jpg",
-    description: "Worked on avionics systems for spacecraft.",
-    link: "experience/spacex-dragon.html#dragon-projects"
-  },
-  {
-    title: "4th order Butterworth Low-Pass Filter",
-    tags: [],
-    image: "Projects/butterworth.png",
-    description: "Designed and analyzed analog filter systems.",
-    link: "projects/butterworth-filter.html"
-  },
-  {
-    title: "Tuning a PI Control System",
-    tags: ["Computer Science"],
-    image: "Projects/pi.png",
-    description: "Designed and tuned PI control system.",
-    link: "projects/pi-control.html"
-  },
-  {
-    title: "Designing a BJT amp",
-    tags: ["CBU"],
-    image: "Projects/amp.png",
-    description: "Designed and analyzed BJT amplifier.",
-    link: "projects/bjt-amplifier.html"
-  },
-  {
-    title: "ALU",
-    tags: ["CBU"],
-    image: "Projects/alu.svg",
-    description: "Designed and analyzed BJT amplifier.",
-    link: "projects/alu.html"
-  },
-  {
-    title: "Starshield",
-    tags: ["SpaceX"],
-    image: "Projects/Starshield.webp",
-    description: "Contributed to electrical engineering work supporting the Starshield program.",
-    link: "experience/spacex-starshield.html#starshield-projects"
   }
 ];

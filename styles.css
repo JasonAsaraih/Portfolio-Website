@@ -189,7 +189,7 @@ section {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* max 3 per row */
+  grid-template-columns: repeat(4, 1fr); /* max 4 per row */
   gap: 20px;
 }
 
@@ -246,8 +246,8 @@ section {
 }
 
 .projects {
-  /* Keep filtered results aligned to the same three-column card tracks. */
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  /* Keep filtered results aligned to the same four-column card tracks. */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .projects-grid {

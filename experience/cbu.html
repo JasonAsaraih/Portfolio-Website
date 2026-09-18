@@ -9,13 +9,18 @@
 </head>
 <body class="detail-page" data-page="cbu">
   <header>
-    <a class="logo" href="../index.html" aria-label="Back to Jason Asariah's portfolio">
-      <img src="../MiscMedia/profile.jpg" alt="Jason Asariah">
+    <a class="logo" href="../index.html#top" aria-label="Jason Asariah home">
+      <img src="../MiscMedia/profile.jpg" alt="Profile">
       <h1>Jason Asariah</h1>
     </a>
-    <nav aria-label="Detail page navigation">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="primary-nav" aria-label="Primary navigation">
+      <a href="../index.html#about">About</a>
       <a href="../index.html#experience">Experience</a>
-      <a href="../index.html#projects">All projects</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../MiscMedia/Jason_Asariah_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       <a href="../index.html#footer">Contact</a>
     </nav>
   </header>
@@ -50,7 +55,23 @@
     </section>
     <section class="related-work" data-related hidden></section>
   </main>
-  <footer><p>Interested in the work? <a href="mailto:JasonSean.Asariah@calbaptist.edu">Get in touch.</a></p></footer>
+  <footer id="footer">
+    <div class="footer">
+      <p>
+        <img src="../MiscMedia/Mail.png" alt="Email" class="email-icon">
+        <a href="mailto:JasonSean.Asariah@calbaptist.edu">JasonSean.Asariah@calbaptist.edu</a>
+      </p>
+      <p>
+        <img src="../MiscMedia/linkedin.webp" alt="LinkedIn" class="linkedin-icon">
+        <a href="https://www.linkedin.com/in/jasonasariah" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+      <p class="phone-contact">
+        <img src="../MiscMedia/phone.webp" alt="Phone" class="phone-icon">
+        <a href="tel:+19515941013">(951) 594-1013</a>
+      </p>
+    </div>
+  </footer>
   <script src="../detail.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

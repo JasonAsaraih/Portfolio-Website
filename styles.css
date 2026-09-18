@@ -10,6 +10,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 body {
   background: #000;
   color: #fff;
@@ -752,11 +756,6 @@ footer {
 .related-links a:hover {
   border-color: #fff;
   transform: translateY(-3px);
-}
-
-.detail-page footer {
-  border-top: 1px solid #fff;
-  color: #fff;
 }
 
 .footer {

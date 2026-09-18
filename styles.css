@@ -176,6 +176,10 @@ nav a:hover {
 
 }
 
+#projects > h2 {
+  margin-bottom: 40px;
+}
+
 section {
   padding: 80px 10%;
 }

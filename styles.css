@@ -514,33 +514,9 @@ section {
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
-.timeline-link::after {
-  content: "\2197";
-  position: absolute;
-  right: -7px;
-  bottom: -7px;
-  display: grid;
-  width: 25px;
-  height: 25px;
-  place-items: center;
-  border: 2px solid #000;
-  border-radius: 50%;
-  background: #fff;
-  color: #000;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1;
-  transition: transform 0.25s ease;
-}
-
 .timeline-link:hover,
 .timeline-link:focus-visible {
   box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.2);
-}
-
-.timeline-link:hover::after,
-.timeline-link:focus-visible::after {
-  transform: translate(3px, -3px) scale(1.08);
 }
 
 .timeline-item:nth-child(1) img { animation-delay: 0s; }

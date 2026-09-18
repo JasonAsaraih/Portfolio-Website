@@ -1,24 +1,17 @@
 const bg = document.getElementById('bg-image');
 
-document.querySelectorAll('.timeline-logo').forEach(img => {
-
-  img.addEventListener('mouseenter', () => {
-    const newBg = img.getAttribute('data-bg');
-
-    bg.style.backgroundImage = `url(${newBg})`;
+document.querySelectorAll('.timeline-link').forEach(link => {
+  const img = link.querySelector('.timeline-logo');
+  const showBackground = () => {
+    bg.style.backgroundImage = `url(${img.dataset.bg})`;
     bg.classList.add('active');
-  });
-
-  img.addEventListener('mouseleave', () => {
-    bg.classList.remove('active');
-  });
-
-});
-
-document.querySelectorAll('.timeline-logo').forEach(img => {
-  img.addEventListener('mouseenter', () => {
     img.classList.add('stopped'); // stops animation forever
-  });
+  };
+
+  link.addEventListener('mouseenter', showBackground);
+  link.addEventListener('mouseleave', () => bg.classList.remove('active'));
+  link.addEventListener('focus', showBackground);
+  link.addEventListener('blur', () => bg.classList.remove('active'));
 });
 
 const container = document.getElementById("projects-container");

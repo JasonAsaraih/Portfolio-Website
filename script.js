@@ -20,11 +20,15 @@ if (container) {
   projects.forEach(project => {
     const card = document.createElement("a");
     card.classList.add("project-card");
+    const projectTags = project.tags
+      .map(tag => `<span class="project-tag">${tag}</span>`)
+      .join("");
 
     card.href = project.link;
 
     card.innerHTML = `
       <img src="${project.image}" alt="${project.title} project preview" loading="lazy" />
+      <div class="project-tags">${projectTags}</div>
       <h3>${project.title}</h3>
       <p>${project.description}</p>
     `;

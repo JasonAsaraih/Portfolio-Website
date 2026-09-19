@@ -17,7 +17,7 @@ const projects = [
     title: "CubeSat",
     tags: ["CBU"],
     image: "Projects/CubeSat.png",
-    description: "Designing Attitude Determination and Control System Card PCB for a 1U CubeSat.",
+    description: "Designing Attitude Determination and Control System PCB for a 1U CubeSat.",
     link: "projects/cubesat.html"
   },
   {

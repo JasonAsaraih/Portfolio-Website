@@ -1,13 +1,13 @@
 const projects = [
     {
-    title: "Starshield",
+    title: "SpaceX - Starshield EE Team Projects",
     tags: ["SpaceX"],
     image: "Projects/Starshield.webp",
     description: "Contributed to electrical engineering work supporting the Starshield program.",
     link: "experience/spacex-starshield.html#starshield-projects"
   },
     {
-    title: "Dragon Avionics Program Projects",
+    title: "SpaceX - Dragon EE Team Projects",
     tags: ["SpaceX"],
     image: "Projects/dragon.jpg",
     description: "Worked on avionics systems for spacecraft.",
@@ -29,7 +29,7 @@ const projects = [
   },
   {
     title: "Snake-Like Robot",
-    tags: ["Personal", "Computer Science"],
+    tags: ["Personal"],
     image: "Projects/Snake.png",
     description: "Developed software, electrical, and mechanical systems of snake-like robot.",
     link: "projects/snake-robot.html"
@@ -42,10 +42,10 @@ const projects = [
     link: "projects/assistive-headset.html"
   },
   {
-    title: "EMG Controlled Car",
+    title: "EMG Controller",
     tags: ["CBU"],
     image: "Projects/EMG.png",
-    description: "Developed EMG-based control system for a remote controlled car.",
+    description: "Developed electromyography (EMG) based control system.",
     link: "projects/emg-car.html"
   },
   {
@@ -71,7 +71,7 @@ const projects = [
   },
   {
     title: "NLP and DNNs on Tweet Datasets",
-    tags: ["Machine Learning", "CBU"],
+    tags: ["CBU"],
     image: "Projects/gis.png",
     description: "Developed ML models for geospatial tweet data analysis.",
     link: "projects/nlp-tweet-research.html"
@@ -85,7 +85,7 @@ const projects = [
   },
   {
     title: "Game in C++",
-    tags: [],
+    tags: ["Personal"],
     image: "Projects/astro.png",
     description: "Developed a game using C++.",
     link: "projects/cpp-game.html"
@@ -99,7 +99,7 @@ const projects = [
   },
   {
     title: "MNIST Demo",
-    tags: ["Machine Learning"],
+    tags: ["Personal"],
     image: "Projects/mnist.png",
     description: "Neural network trained on MNIST dataset.",
     link: "projects/mnist-demo.html"

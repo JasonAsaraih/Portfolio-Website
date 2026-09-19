@@ -10,14 +10,14 @@ const projects = [
     title: "Dragon EE Team Projects",
     tags: ["SpaceX"],
     image: "Projects/dragon.jpg",
-    description: "Designed harnesses and validation schemtics for Dragon program.",
+    description: "Designed flight harnesses and schematics for validation boards for Dragon program.",
     link: "experience/spacex-dragon.html#dragon-projects"
   },
   {
     title: "CubeSat",
     tags: ["CBU"],
     image: "Projects/CubeSat.png",
-    description: "Designing Attitude Determination Card and Electrical Power System PCBs for a 1U CubeSat.",
+    description: "Designing Attitude Determination and Control System Card PCB for a 1U CubeSat.",
     link: "projects/cubesat.html"
   },
   {
@@ -45,7 +45,7 @@ const projects = [
     title: "Headset for Visually Impaired",
     tags: ["Personal"],
     image: "Projects/Headset.png",
-    description: "Assistive headset system for visually impaired users.",
+    description: "Assistive headset system for visually impaired users with ML and computer vision.",
     link: "projects/assistive-headset.html"
   },
   {
@@ -59,7 +59,7 @@ const projects = [
     title: "Engineering Team Projects",
     tags: ["Bourns"],
     image: "Projects/gdt.png",
-    description: "Worked on high voltage protection component packaging.",
+    description: "Worked on high voltage protection component packaging and thermal protection device applications.",
     link: "experience/bourns.html#high-voltage-packaging"
   },
   {

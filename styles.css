@@ -333,8 +333,8 @@ section {
 }
 
 .about-img {
-  width: 300px;
-  height: 300px;
+  width: 260px;
+  height: 260px;
   object-fit: cover;
 
   border-radius: 12px;
@@ -542,6 +542,10 @@ section {
 
 .role {
   color: #fff;
+}
+
+.timeline-item .cbu-roles {
+  text-align: left;
 }
 
 .degree {
@@ -925,7 +929,7 @@ footer {
   }
 
   .about-img {
-    width: min(100%, 280px);
+    width: min(100%, 240px);
     height: auto;
     aspect-ratio: 1;
   }

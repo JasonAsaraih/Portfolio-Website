@@ -17,21 +17,21 @@ const projects = [
     title: "CubeSat",
     tags: ["CBU"],
     image: "Projects/CubeSat.png",
-    description: "Designing Attitude Determination and Control System PCB for a 1U CubeSat.",
+    description: "Designing Attitude Determination and Control System electrical hardware for a 1U CubeSat.",
     link: "projects/cubesat.html"
   },
   {
     title: "The Arsenal",
     tags: ["CBU Robotics"],
     image: "Projects/arsenal.png",
-    description: "Custom electronics system for sensor data acquisition for robot localization.",
+    description: "Custom PCB and electronics system for sensor data acquisition for robot localization.",
     link: "projects/arsenal-v1.html"
   },
   {
     title: "Quadruped Robot",
     tags: ["Personal"],
     image: "Projects/QuadrupedalRobot.png",
-    description: "Developed software/control system, electrical, and mechanical systems of quadrupedal robot.",
+    description: "Developed software/control, electrical, and mechanical systems of quadrupedal robot.",
     link: "projects/quadruped.html"
   },
   {

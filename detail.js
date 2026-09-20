@@ -16,6 +16,7 @@ const detailPages = {
   quadruped: {
     title: "Quadruped Robot", image: "Projects/QuadrupedalRobot.png", eyebrow: "Personal robotics project",
     summary: "A four-legged robot developed across its mechanical, electrical, and control layers.",
+    source: "https://youtu.be/nQIeAxxUmYM", sourceLabel: "Watch the robot in action",
     skills: ["C++", "Robotics", "Motor Control", "CAD & Prototyping"], sectionLabel: "The work", sectionTitle: "Project details",
     projects: [{ title: "Integrated Robot Platform", description: "The quadruped is an end-to-end robotics build: joints and structure must support useful motion, electronics must deliver power safely, and software must coordinate multiple actuators in real time. Developing each layer together made it possible to iterate toward stable, repeatable movement.", points: ["Integrated actuator control, power distribution, and the mechanical frame as one system.", "Developed motion logic for coordinated leg trajectories and repeatable gait experiments.", "Used iterative testing to identify mechanical limits and improve control behavior."] }]
   },

@@ -40,10 +40,9 @@ const detailPages = {
   },
   "nlp-tweet-research": {
     title: "NLP and DNNs on Tweet Datasets", image: "Projects/gis.png", eyebrow: "Machine learning research",
-    summary: "Research combining natural-language processing, deep neural networks, and geospatial tweet data.",
-    skills: ["NLP", "Deep Learning", "Python", "Research"], sectionLabel: "The research", sectionTitle: "Research details",
+    summary: "Read the published paper for the research methods, analysis, and findings.",
+    skills: ["NLP", "Deep Learning", "Python", "Research"],
     source: "https://aisel.aisnet.org/amcis2025/intelfuture/intelfuture/27/", sourceLabel: "View the published research",
-    projects: [{ title: "Geospatial Tweet Analysis", description: "Short social posts contain noisy language but can reveal useful geographic and behavioral patterns at scale. This research investigated preprocessing and learned representations for extracting insights from tweet datasets.", points: ["Prepared noisy social-text data for repeatable machine-learning experiments.", "Developed and compared NLP and deep-learning approaches.", "Contributed to research presented in the AMCIS 2025 proceedings."] }]
   },
   "arsenal-v1": {
     title: "Arsenal V1", image: "Projects/arsenal.png", eyebrow: "CBU Robotics",
@@ -151,7 +150,9 @@ if (page) {
   });
 
   const projectList = document.querySelector("[data-project-list]");
-  page.projects.forEach(project => projectList.append(renderProject(project, page.title)));
+  if (projectList && page.projects) {
+    page.projects.forEach(project => projectList.append(renderProject(project, page.title)));
+  }
 
   const note = document.querySelector("[data-note]");
   if (page.note) {

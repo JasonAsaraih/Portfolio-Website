@@ -60,6 +60,7 @@ const detailPages = {
   robotics: {
     title: "CBU Robotics Team", image: "MiscMedia/CBUcompthumbnail2026.png", eyebrow: "Fall 2023 – Present",
     summary: "Technical leadership across multiple seasons, progressing from senior electrical lead and vice president to president.",
+    source: "https://www.youtube.com/watch?v=Pme9x-fLtBs", sourceLabel: "Watch the robot reveal",
     skills: ["Technical Leadership", "Robotics", "Team Development", "Systems Integration"], sectionLabel: "The experience", sectionTitle: "Role details",
     projects: [{ title: "Technical & Team Leadership", image: "Projects/arsenal.png", description: "CBU Robotics brings electrical, mechanical, and software students together to build competition systems under real deadlines. Jason’s role spans technical architecture, team coordination, mentorship, and long-term platform development.", points: ["Led custom electronics, power, sensing, and system-integration work as Senior Electrical Lead.", "Served as Vice President before advancing to President for the 2026 season.", "Mentored team members and coordinated electrical decisions with software and mechanical groups."] }]
   },

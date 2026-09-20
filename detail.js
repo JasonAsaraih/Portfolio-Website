@@ -48,7 +48,16 @@ const detailPages = {
     title: "California Baptist University", image: "MiscMedia/CBU.jpg", eyebrow: "Fall 2023 – Spring 2027",
     summary: "B.S. Electrical & Computer Engineering supported by research, teaching, and technical mentorship.",
     skills: ["Electrical Engineering", "Computer Engineering", "Research", "Teaching & Mentorship"], sectionLabel: "The experience", sectionTitle: "Role details",
-    projects: [{ title: "Research, Teaching & Mentorship", description: "At CBU, Jason combines a rigorous engineering curriculum with work that helps other students learn and contributes to applied research. The experience spans circuit theory, machine learning, biomedical systems, and laboratory instruction.", points: ["Tutors students in circuit theory and physics and supports courses as a teaching assistant.", "Contributes to machine-learning and biomedical-engineering research.", "Serves as a lab instructor and coaches FIRST LEGO League students."] }]
+    projects: [{
+      title: "Research, Teaching & Mentorship",
+      description: "At California Baptist University, I am pursuing a B.S. in Electrical and Computer Engineering with a minor in Computer Science. My experience combines circuit theory, machine learning and biomedical research, laboratory instruction, tutoring, and hands-on technical mentorship.",
+      points: [
+        "Support students as an EGR 101 teaching assistant, EGR 182 lab instructor, and tutor for circuit theory and physics.",
+        "Contribute to machine-learning research, including social-media sentiment analysis, computer-vision classification, and opioid-presence prediction.",
+        "Conducted biomedical-engineering research on passive exoskeleton systems and presented the work at CBU's Open House.",
+        "Mentor younger students through STEM education and robotics, including coaching FIRST LEGO League teams."
+      ]
+    }]  
   },
   robotics: {
     title: "CBU Robotics Team", image: "MiscMedia/CBUcompthumbnail2026.png", eyebrow: "Fall 2023 – Present",

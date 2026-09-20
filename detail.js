@@ -16,9 +16,9 @@ const detailPages = {
   quadruped: {
     title: "Quadruped Robot", image: "Projects/QuadrupedalRobot.png", eyebrow: "Personal robotics project",
     summary: "A four-legged robot developed across its mechanical, electrical, and control layers.",
-    source: "https://youtu.be/nQIeAxxUmYM", sourceLabel: "Watch the robot in action",
+    source: "https://youtu.be/nQIeAxxUmYM", sourceLabel: "Watch the robot in action!",
     skills: ["C++", "Robotics", "Motor Control", "CAD & Prototyping"], sectionLabel: "The work", sectionTitle: "Project details",
-    projects: [{ title: "Integrated Robot Platform", description: "The quadruped is an end-to-end robotics build: joints and structure must support useful motion, electronics must deliver power safely, and software must coordinate multiple actuators in real time. Developing each layer together made it possible to iterate toward stable, repeatable movement.", points: ["Integrated actuator control, power distribution, and the mechanical frame as one system.", "Developed motion logic for coordinated leg trajectories and repeatable gait experiments.", "Used iterative testing to identify mechanical limits and improve control behavior."] }]
+    projects: [{ title: "Robot Design", description: "Designed mechanical structure, software, and electronics system for quadruped robot.", points: ["Designed mechanical system in Fusion360 and 3D printed componetns.", "Developed motion logic for coordinated leg trajectories and repeatable gait experiments.", "Used iterative testing to identify mechanical limits and improve control behavior."] }]
   },
   "snake-robot": {
     title: "Snake-Like Robot", image: "Projects/Snake.png", eyebrow: "Personal robotics project",
@@ -59,9 +59,9 @@ const detailPages = {
   robotics: {
     title: "CBU Robotics Team", image: "MiscMedia/CBUcompthumbnail2026.png", eyebrow: "Fall 2023 – Present",
     summary: "Technical leadership across multiple seasons, progressing from senior electrical lead and vice president to president.",
-    source: "https://www.youtube.com/watch?v=Pme9x-fLtBs", sourceLabel: "Watch the robot reveal",
+    source: "https://www.youtube.com/watch?v=Pme9x-fLtBs", sourceLabel: "Watch last season's robot reveal video!",
     skills: ["Technical Leadership", "Robotics", "Team Development", "Systems Integration"], sectionLabel: "The experience", sectionTitle: "Role details",
-    projects: [{ title: "Technical & Team Leadership", image: "Projects/arsenal.png", description: "CBU Robotics brings electrical, mechanical, and software students together to build competition systems under real deadlines. Jason’s role spans technical architecture, team coordination, mentorship, and long-term platform development.", points: ["Led custom electronics, power, sensing, and system-integration work as Senior Electrical Lead.", "Served as Vice President before advancing to President for the 2026 season.", "Mentored team members and coordinated electrical decisions with software and mechanical groups."] }]
+    projects: [{ title: "Data Acquisition PCB", image: "Projects/arsenal.png", description: "Led development of the data acquisition electronics for robot localization.", points: ["Led design of boards with USB, I2C, UART, and RS485 interfaces.", "Performed board bring up and validation testing.", "Interfaced with various kinds of sensors such as encoders and optical flow control sensors for robot localization"] }]
   },
   bourns: {
     title: "Bourns, Inc.", image: "MiscMedia/Bourns-bg.jpg", eyebrow: "Engineering Intern · Summer 2024",

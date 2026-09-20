@@ -1,72 +1,161 @@
 const detailPages = {
-  cubesat: { type: 'Project', title: 'CubeSat Project', image: 'Projects/CubeSat.png', eyebrow: 'California Baptist University', summary: 'A 1U CubeSat avionics effort focused on reliable attitude sensing and power management in a tightly constrained spacecraft.', overview: 'This project brings together schematic design, component selection, board-level interfaces, and system thinking. The work centers on the Attitude Determination Card and Electrical Power System PCBs—the electronics responsible for understanding spacecraft orientation and safely distributing limited power.', contributions: ['Designed board architecture around the size, power, and reliability constraints of a 1U platform.', 'Developed schematic-level interfaces for sensors, processing, power conversion, and subsystem connections.', 'Considered design-for-test, fault protection, and clear documentation throughout the PCB workflow.'], skills: ['PCB Design', 'Power Electronics', 'Embedded Systems', 'Systems Engineering'] },
-  quadruped: { type: 'Project', title: 'Quadruped Robot', image: 'Projects/QuadrupedalRobot.png', eyebrow: 'Personal robotics project', summary: 'A four-legged robot developed across its mechanical, electrical, and control layers.', overview: 'The quadruped is an end-to-end robotics build: joints and structure must support useful motion, electronics must deliver power safely, and software must coordinate multiple actuators in real time. Developing each layer together made it possible to iterate toward stable, repeatable movement.', contributions: ['Integrated actuator control, power distribution, and the mechanical frame as one system.', 'Developed motion logic for coordinated leg trajectories and repeatable gait experiments.', 'Used iterative testing to identify mechanical limits and improve control behavior.'], skills: ['C++', 'Robotics', 'Motor Control', 'CAD & Prototyping'] },
-  'snake-robot': { type: 'Project', title: 'Snake-Like Robot', image: 'Projects/Snake.png', eyebrow: 'Personal robotics project', summary: 'A modular robot that explores locomotion through coordinated, wave-like joint motion.', overview: 'The robot uses a chain of actuated segments to recreate the body waves that let a snake move through constrained environments. The project required careful coordination between mechanical packaging, wiring, and software timing.', contributions: ['Built a modular electrical and mechanical architecture that could grow by adding segments.', 'Programmed phase-offset joint commands to create smooth locomotion patterns.', 'Tested motion parameters and refined the design for dependable movement.'], skills: ['Embedded Control', 'Kinematics', 'Mechanical Design', 'Rapid Prototyping'] },
-  'cnn-element-detection': { type: 'Project', title: 'CNN for Element Detection', image: 'Projects/CNN.png', eyebrow: 'CBU Robotics', summary: 'A YOLO-based computer-vision model for recognizing competition game elements.', overview: 'Fast and reliable object detection gives a competition robot useful information about its surroundings. This project covered the practical machine-learning pipeline from assembling training data through evaluating and deploying a detector.', contributions: ['Prepared and labeled images representing relevant game conditions.', 'Trained a YOLO convolutional neural network and evaluated detection quality.', 'Considered inference speed and confidence thresholds for use on a live robot.'], skills: ['Python', 'YOLO', 'Computer Vision', 'Dataset Curation'] },
-  'portfolio-website': { type: 'Project', title: 'Portfolio Website', image: 'Projects/website.png', eyebrow: 'Personal software project', summary: 'A responsive, accessible site built to present engineering work through a clear visual story.', overview: 'This website was developed without a heavy framework so its structure, styling, and behavior remain transparent and fast. The project combines responsive layouts, interactive filtering, accessible navigation, and dedicated storytelling pages.', contributions: ['Designed a responsive layout for desktop and mobile visitors.', 'Built interactive project filtering and experience navigation in JavaScript.', 'Organized project media and technical writing into reusable detail-page patterns.'], skills: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'] },
-  'emg-car': { type: 'Project', title: 'EMG Controlled Car', image: 'Projects/EMG.png', eyebrow: 'California Baptist University', summary: 'A remote-controlled car driven by electrical activity measured from a user’s muscles.', overview: 'The system translates a biological signal into an intuitive vehicle command. Because surface EMG is small and noisy, the project depends on thoughtful electrode placement, analog conditioning, thresholding, and safe control behavior.', contributions: ['Captured surface EMG signals and conditioned them for dependable measurement.', 'Processed muscle activation into discrete vehicle control commands.', 'Integrated the sensing, embedded control, and mobile platform into a working demonstration.'], skills: ['Biomedical Instrumentation', 'Signal Processing', 'Embedded Systems', 'Analog Circuits'] },
-  'assistive-headset': { type: 'Project', title: 'Headset for the Visually Impaired', image: 'Projects/Headset.png', eyebrow: 'Personal assistive-technology project', summary: 'A wearable concept designed to give visually impaired users useful environmental feedback.', overview: 'The headset explores how compact sensing can identify nearby obstacles and communicate them without blocking the user’s hearing or movement. The design prioritizes comfort, clear feedback, and practical real-world use.', contributions: ['Explored sensor placement and coverage for detecting nearby obstacles.', 'Designed an embedded feedback workflow that turns distance information into intuitive cues.', 'Balanced electronics packaging with wearability and user-centered constraints.'], skills: ['Assistive Technology', 'Sensors', 'Embedded Design', 'Human-Centered Design'] },
-  'nlp-tweet-research': { type: 'Research', title: 'NLP and DNNs on Tweet Datasets', image: 'Projects/gis.png', eyebrow: 'Machine learning research', summary: 'Research combining natural-language processing, deep neural networks, and geospatial tweet data.', overview: 'Short social posts contain noisy language but can reveal useful geographic and behavioral patterns at scale. This research investigated preprocessing and learned representations for extracting insights from tweet datasets.', contributions: ['Prepared noisy social-text data for repeatable machine-learning experiments.', 'Developed and compared NLP and deep-learning approaches.', 'Contributed to research presented in the AMCIS 2025 proceedings.'], skills: ['NLP', 'Deep Learning', 'Python', 'Research'], source: 'https://aisel.aisnet.org/amcis2025/intelfuture/intelfuture/27/', sourceLabel: 'View the published research' },
-  'passive-exoskeleton': { type: 'Project', title: 'Passive Exoskeleton', image: 'Projects/exo.png', eyebrow: 'California Baptist University', summary: 'A wearable mechanical system designed to redirect loads and reduce user effort without powered actuators.', overview: 'A passive exoskeleton must support movement rather than fight it. The project explored body geometry, load paths, joint alignment, and compliant elements to create useful assistance with a simple mechanical architecture.', contributions: ['Translated a target movement into mechanical support requirements.', 'Developed a wearable structure around joint alignment and range-of-motion constraints.', 'Iterated the design with attention to comfort, adjustability, and manufacturability.'], skills: ['Biomechanics', 'Mechanical Design', 'Prototyping', 'Engineering Analysis'] },
-  'cpp-game': { type: 'Project', title: 'Game in C++', image: 'Projects/astro.png', eyebrow: 'Software project', summary: 'An interactive game built in C++ to practice real-time logic and object-oriented design.', overview: 'The project turns core programming concepts into an interactive application. It organizes game entities, input, updates, and rendering into understandable components while maintaining a responsive loop.', contributions: ['Implemented the primary game loop, player input, and state transitions.', 'Used object-oriented structures to keep gameplay entities maintainable.', 'Added collision, scoring, and progression behavior through iterative testing.'], skills: ['C++', 'Object-Oriented Design', 'Game Logic', 'Debugging'] },
-  'arsenal-v1': { type: 'Project', title: 'Arsenal V1', image: 'Projects/noimg.png', eyebrow: 'CBU Robotics', summary: 'The first custom electronics foundation for a competition robotics platform.', overview: 'Arsenal V1 established a centralized approach to connecting sensors, actuators, power, and control hardware. It served as a practical baseline for learning what the team needed from future generations.', contributions: ['Developed the first-generation electrical system architecture.', 'Consolidated common robot connections into a more serviceable layout.', 'Captured lessons from competition use to guide the next revision.'], skills: ['PCB Design', 'Robotics Electronics', 'System Integration', 'Testing'] },
-  'arsenal-v25': { type: 'Project', title: 'Arsenal V2.5', image: 'Projects/noimg.png', eyebrow: 'CBU Robotics', summary: 'An improved robot electronics architecture shaped by field experience and faster service needs.', overview: 'Version 2.5 refined the original platform with a focus on robustness, clearer interfaces, and easier debugging. The revision balanced new capability with the need to remain understandable to a student team.', contributions: ['Revised power and signal organization based on V1 testing.', 'Improved connector access and system serviceability.', 'Standardized interfaces to make integration and troubleshooting faster.'], skills: ['Electrical Architecture', 'Design Iteration', 'Robotics', 'Team Engineering'] },
-  'arsenal-v3': { type: 'Project', title: 'Arsenal V3', image: 'Projects/noimg.png', eyebrow: 'CBU Robotics', summary: 'A third-generation sensing and control platform for advanced competition robots.', overview: 'Arsenal V3 extends the team’s custom-electronics approach toward a mature platform. It focuses on scalable sensing, dependable control interfaces, and a design that can support complex autonomous behavior.', contributions: ['Developed a scalable architecture for distributed robot sensing and control.', 'Applied prior revision lessons to protection, connectivity, and maintainability.', 'Coordinated electrical requirements with mechanical and software team needs.'], skills: ['Systems Engineering', 'Custom Electronics', 'Leadership', 'Robotics'] },
-  'mnist-demo': { type: 'Project', title: 'MNIST Demo', image: 'Projects/mnist.png', eyebrow: 'Machine learning project', summary: 'A neural-network demonstration that classifies handwritten digits from the MNIST dataset.', overview: 'MNIST provides a focused way to understand the full supervised-learning workflow. The demo covers normalized image inputs, model training, validation, and inspection of predictions and errors.', contributions: ['Prepared image data and labels for model training and evaluation.', 'Built and trained a neural network for ten-class digit recognition.', 'Reviewed misclassifications to understand model behavior beyond accuracy alone.'], skills: ['Neural Networks', 'Python', 'Data Preparation', 'Model Evaluation'] },
-  'butterworth-filter': { type: 'Project', title: '4th-Order Butterworth Low-Pass Filter', image: 'Projects/butterworth.png', eyebrow: 'Analog circuits project', summary: 'A fourth-order active filter designed for a flat passband and controlled high-frequency attenuation.', overview: 'The Butterworth response is useful where amplitude flatness matters. This project translated target cutoff and order requirements into cascaded analog stages, then compared calculated and measured behavior.', contributions: ['Calculated stage values for a fourth-order Butterworth response.', 'Built and simulated the cascaded active-filter circuit.', 'Evaluated cutoff behavior, roll-off, and practical component effects.'], skills: ['Analog Circuits', 'Filter Design', 'Simulation', 'Lab Measurement'] },
-  'pi-control': { type: 'Project', title: 'Tuning a PI Control System', image: 'Projects/pi.png', eyebrow: 'Controls project', summary: 'A proportional-integral controller tuned to improve tracking while eliminating steady-state error.', overview: 'This project explored how controller gains shape transient and steady-state behavior. Modeling and repeated tests made the tradeoffs among rise time, overshoot, stability, and disturbance rejection visible.', contributions: ['Modeled the target plant and selected initial controller gains.', 'Tuned proportional and integral action using response measurements.', 'Compared performance using rise time, overshoot, settling, and steady-state error.'], skills: ['Control Systems', 'MATLAB', 'System Modeling', 'Data Analysis'] },
-  'bjt-amplifier': { type: 'Project', title: 'BJT Amplifier Design', image: 'Projects/amp.png', eyebrow: 'California Baptist University', summary: 'A transistor amplifier designed from bias-point requirements through small-signal performance.', overview: 'The design connects transistor theory to practical analog behavior. Establishing a stable DC operating point allowed the circuit to amplify an AC signal with useful gain and manageable distortion.', contributions: ['Selected bias components for a stable operating point.', 'Calculated small-signal gain and input/output behavior.', 'Compared theoretical, simulated, and measured circuit performance.'], skills: ['Analog Electronics', 'BJT Biasing', 'Circuit Simulation', 'Lab Testing'] },
-  alu: { type: 'Project', title: 'Arithmetic Logic Unit', image: 'Projects/alu.svg', eyebrow: 'Digital design project', summary: 'A digital arithmetic logic unit that performs selectable mathematical and logical operations.', overview: 'The ALU demonstrates how basic combinational blocks form a processor datapath. Inputs, operation selection, results, and status behavior were designed as a coherent digital system.', contributions: ['Designed arithmetic and Boolean operation blocks.', 'Implemented operation selection and output logic.', 'Verified expected behavior across representative input combinations.'], skills: ['Digital Logic', 'Computer Architecture', 'Verification', 'System Design'] },
-  cbu: { type: 'Experience', title: 'California Baptist University', image: 'MiscMedia/CBU.jpg', eyebrow: 'Fall 2023 – Spring 2027', summary: 'B.S. Electrical & Computer Engineering supported by research, teaching, and technical mentorship.', overview: 'At CBU, Jason combines a rigorous engineering curriculum with work that helps other students learn and contributes to applied research. The experience spans circuit theory, machine learning, biomedical systems, and laboratory instruction.', contributions: ['Tutors students in circuit theory and physics and supports courses as a teaching assistant.', 'Contributes to machine-learning and biomedical-engineering research.', 'Serves as a lab instructor and coaches FIRST LEGO League students.'], skills: ['Electrical Engineering', 'Computer Engineering', 'Research', 'Teaching & Mentorship'] },
-  robotics: { type: 'Experience', title: 'CBU Robotics Team', image: 'MiscMedia/CBUcompthumbnail2026.png', eyebrow: 'Fall 2023 – Present', summary: 'Technical leadership across multiple seasons, progressing from senior electrical lead and vice president to president.', overview: 'CBU Robotics brings electrical, mechanical, and software students together to build competition systems under real deadlines. Jason’s role spans technical architecture, team coordination, mentorship, and long-term platform development.', contributions: ['Led custom electronics, power, sensing, and system-integration work as Senior Electrical Lead.', 'Served as Vice President before advancing to President for the 2026 season.', 'Mentored team members and coordinated electrical decisions with software and mechanical groups.'], skills: ['Technical Leadership', 'Robotics', 'Team Development', 'Systems Integration'], related: [['The Arsenal', '../projects/arsenal-v1.html']] },
-  bourns: { type: 'Experience', title: 'Bourns, Inc.', image: 'MiscMedia/Bourns-bg.jpg', eyebrow: 'Engineering Intern · Summer 2024', summary: 'Product-development experience focused on circuit-protection applications and high-voltage component packaging.', overview: 'At Bourns, Jason supported engineering work that connected component behavior with practical product applications. The internship combined circuit design, component evaluation, prototyping, and clear technical documentation.', contributions: ['Designed and evaluated applications for thermal protection components.', 'Supported packaging concepts for high-voltage protection components.', 'Documented design decisions and communicated results with the engineering team.'], skills: ['Circuit Protection', 'Application Design', 'Component Testing', 'Technical Documentation'], projects: [{ id: 'thermal-protection', label: 'Project 01', title: 'Thermal Protection Component Application Design', image: 'Projects/tco.png', description: 'Designed application concepts around thermal protection components, translating electrical and thermal requirements into practical circuit-level solutions.', points: ['Reviewed operating requirements and component behavior.', 'Developed circuit concepts for protection use cases.', 'Evaluated design tradeoffs and documented findings.'] }, { id: 'high-voltage-packaging', label: 'Project 02', title: 'High-Voltage Component Packaging', image: 'Projects/gdt.png', description: 'Explored packaging for high-voltage protection components with attention to electrical isolation, mechanical fit, and a robust final assembly.', points: ['Considered clearance, insulation, and high-voltage constraints.', 'Balanced electrical needs with mechanical packaging limits.', 'Supported prototype evaluation and design refinement.'] }] },
-  'spacex-dragon': { type: 'Experience', title: 'SpaceX Dragon', image: 'Projects/dragon.jpg', eyebrow: 'Avionics Engineering Intern · Summer 2025', summary: 'Avionics engineering work supporting the electrical systems behind SpaceX’s Dragon spacecraft.', overview: 'Jason contributed to Dragon avionics work in a fast-paced aerospace environment. The experience emphasized reliable electrical design, careful system integration, and engineering communication for spacecraft hardware.', contributions: ['Supported schematic and wiring-harness design for avionics systems.', 'Worked across component, subsystem, and vehicle-level requirements.', 'Produced engineering documentation to support design reviews and integration.'], skills: ['Avionics', 'Wiring Harness Design', 'Schematic Design', 'Aerospace Systems'], projects: [{ id: 'dragon-projects', label: 'Program work', title: 'Dragon Avionics Program Projects', image: 'Projects/dragon.jpg', description: 'Contributed to avionics engineering projects supporting spacecraft electrical systems and their integration.', points: ['Applied electrical design principles to flight-hardware constraints.', 'Supported system interfaces through schematics and harness work.', 'Collaborated within a multidisciplinary engineering environment.'] }] },
-  'spacex-starshield': { type: 'Experience', title: 'SpaceX Starshield', image: 'Projects/Starshield.webp', eyebrow: 'Electrical Engineering Intern · Summer 2026', summary: 'End to end ownership of four prototype flight PCBs. Designed two additional PCBs to test and validate prototype flight boards', overview: 'will add', contributions: ['Supported electrical engineering tasks for integrated aerospace hardware.', 'Contributed to design documentation and system-level coordination.', 'Worked within the reliability and schedule demands of an aerospace program.'], skills: ['Electrical Engineering', 'Aerospace Hardware', 'Satellite Electronics', 'Mixed-Signal Circuit Design', 'High-Speed Digital Interfaces', 'LVDS', 'SPI', 'I²C', 'Power Sequencing', 'Precision Voltage References', 'Flash Memory Interfaces', 'PCB Schematic Design', 'PCB Layout Design', 'Signal Integrity Validation', 'Board Bring-Up', 'Hardware Validation', 'FPGA Test Collaboration', 'Thermal Design Integration', 'Manufacturing Coordination', 'Systems Integration', 'Design Documentation', "Xpedition Designer", "Xpedition Layout"], projects: [{ id: 'starshield-projects', title: 'PCB Design and Board Validation', image: 'miscmedia/satellite.webp', description: 'Owned the schematic design, development, and board bring-up of four satellite flight-prototype PCBs supporting a hardware trade study.',
-points: [
-  'Designed schematic for high-speed and mixed-signal circuitry with parallel LVDS, SPI, differential I²C, flash-memory interfaces, precision voltage/current references, and power sequencing',
-  'Coordinated board development with PCB layout, supply chain, PCBA manufacturers, and vendors through fabrication and assembly',
-  'Partnered with thermal and mechanical teams to address tight thermal-dissipation constraints through component placement, board sizing, connector selection, and high-speed harness selection',
-  'Designed and laid out two high-speed test-coupon PCBs to validate prototype-board interfaces and reduce development risk',
-  'Performed board bring-up and functional validation of power, digital communications, high-speed interfaces, and inter-board interconnects',
-  'Developed low-speed validation software and collaborated with FPGA engineers on high-speed signal-validation test plans'] }], note: 'Public details are intentionally limited to respect program confidentiality.' },
+  cubesat: {
+    title: "CubeSat Project",
+    image: "Projects/CubeSat.png",
+    eyebrow: "California Baptist University",
+    summary: "A 1U CubeSat avionics effort focused on reliable attitude sensing and power management in a tightly constrained spacecraft.",
+    skills: ["PCB Design", "Power Electronics", "Embedded Systems", "Systems Engineering"],
+    sectionLabel: "The work",
+    sectionTitle: "Project details",
+    projects: [{
+      title: "CubeSat Avionics",
+      description: "This project brings together schematic design, component selection, board-level interfaces, and system thinking. The work centers on the Attitude Determination Card and Electrical Power System PCBs—the electronics responsible for understanding spacecraft orientation and safely distributing limited power.",
+      points: ["Designed board architecture around the size, power, and reliability constraints of a 1U platform.", "Developed schematic-level interfaces for sensors, processing, power conversion, and subsystem connections.", "Considered design-for-test, fault protection, and clear documentation throughout the PCB workflow."]
+    }]
+  },
+  quadruped: {
+    title: "Quadruped Robot", image: "Projects/QuadrupedalRobot.png", eyebrow: "Personal robotics project",
+    summary: "A four-legged robot developed across its mechanical, electrical, and control layers.",
+    skills: ["C++", "Robotics", "Motor Control", "CAD & Prototyping"], sectionLabel: "The work", sectionTitle: "Project details",
+    projects: [{ title: "Integrated Robot Platform", description: "The quadruped is an end-to-end robotics build: joints and structure must support useful motion, electronics must deliver power safely, and software must coordinate multiple actuators in real time. Developing each layer together made it possible to iterate toward stable, repeatable movement.", points: ["Integrated actuator control, power distribution, and the mechanical frame as one system.", "Developed motion logic for coordinated leg trajectories and repeatable gait experiments.", "Used iterative testing to identify mechanical limits and improve control behavior."] }]
+  },
+  "snake-robot": {
+    title: "Snake-Like Robot", image: "Projects/Snake.png", eyebrow: "Personal robotics project",
+    summary: "A modular robot that explores locomotion through coordinated, wave-like joint motion.",
+    skills: ["Embedded Control", "Kinematics", "Mechanical Design", "Rapid Prototyping"], sectionLabel: "The work", sectionTitle: "Project details",
+    projects: [{ title: "Modular Locomotion System", description: "The robot uses a chain of actuated segments to recreate the body waves that let a snake move through constrained environments. The project required careful coordination between mechanical packaging, wiring, and software timing.", points: ["Built a modular electrical and mechanical architecture that could grow by adding segments.", "Programmed phase-offset joint commands to create smooth locomotion patterns.", "Tested motion parameters and refined the design for dependable movement."] }]
+  },
+  "emg-car": {
+    title: "EMG Controlled Car", image: "Projects/EMG.png", eyebrow: "California Baptist University",
+    summary: "A remote-controlled car driven by electrical activity measured from a user’s muscles.",
+    skills: ["Biomedical Instrumentation", "Signal Processing", "Embedded Systems", "Analog Circuits"], sectionLabel: "The work", sectionTitle: "Project details",
+    projects: [{ title: "Muscle-Signal Control System", description: "The system translates a biological signal into an intuitive vehicle command. Because surface EMG is small and noisy, the project depends on thoughtful electrode placement, analog conditioning, thresholding, and safe control behavior.", points: ["Captured surface EMG signals and conditioned them for dependable measurement.", "Processed muscle activation into discrete vehicle control commands.", "Integrated the sensing, embedded control, and mobile platform into a working demonstration."] }]
+  },
+  "assistive-headset": {
+    title: "Headset for the Visually Impaired", image: "Projects/Headset.png", eyebrow: "Personal assistive-technology project",
+    summary: "A wearable concept designed to give visually impaired users useful environmental feedback.",
+    skills: ["Assistive Technology", "Sensors", "Embedded Design", "Human-Centered Design"], sectionLabel: "The work", sectionTitle: "Project details",
+    projects: [{ title: "Wearable Obstacle Feedback", description: "The headset explores how compact sensing can identify nearby obstacles and communicate them without blocking the user’s hearing or movement. The design prioritizes comfort, clear feedback, and practical real-world use.", points: ["Explored sensor placement and coverage for detecting nearby obstacles.", "Designed an embedded feedback workflow that turns distance information into intuitive cues.", "Balanced electronics packaging with wearability and user-centered constraints."] }]
+  },
+  "nlp-tweet-research": {
+    title: "NLP and DNNs on Tweet Datasets", image: "Projects/gis.png", eyebrow: "Machine learning research",
+    summary: "Research combining natural-language processing, deep neural networks, and geospatial tweet data.",
+    skills: ["NLP", "Deep Learning", "Python", "Research"], sectionLabel: "The research", sectionTitle: "Research details",
+    source: "https://aisel.aisnet.org/amcis2025/intelfuture/intelfuture/27/", sourceLabel: "View the published research",
+    projects: [{ title: "Geospatial Tweet Analysis", description: "Short social posts contain noisy language but can reveal useful geographic and behavioral patterns at scale. This research investigated preprocessing and learned representations for extracting insights from tweet datasets.", points: ["Prepared noisy social-text data for repeatable machine-learning experiments.", "Developed and compared NLP and deep-learning approaches.", "Contributed to research presented in the AMCIS 2025 proceedings."] }]
+  },
+  "arsenal-v1": {
+    title: "Arsenal V1", image: "Projects/arsenal.png", eyebrow: "CBU Robotics",
+    summary: "The first custom electronics foundation for a competition robotics platform.",
+    skills: ["PCB Design", "Robotics Electronics", "System Integration", "Testing"], sectionLabel: "The work", sectionTitle: "Project details",
+    projects: [{ title: "Custom Robot Electronics", description: "Arsenal V1 established a centralized approach to connecting sensors, actuators, power, and control hardware. It served as a practical baseline for learning what the team needed from future generations.", points: ["Developed the first-generation electrical system architecture.", "Consolidated common robot connections into a more serviceable layout.", "Captured lessons from competition use to guide the next revision."] }]
+  },
+  cbu: {
+    title: "California Baptist University", image: "MiscMedia/CBU.jpg", eyebrow: "Fall 2023 – Spring 2027",
+    summary: "B.S. Electrical & Computer Engineering supported by research, teaching, and technical mentorship.",
+    skills: ["Electrical Engineering", "Computer Engineering", "Research", "Teaching & Mentorship"], sectionLabel: "The experience", sectionTitle: "Role details",
+    projects: [{ title: "Research, Teaching & Mentorship", description: "At CBU, Jason combines a rigorous engineering curriculum with work that helps other students learn and contributes to applied research. The experience spans circuit theory, machine learning, biomedical systems, and laboratory instruction.", points: ["Tutors students in circuit theory and physics and supports courses as a teaching assistant.", "Contributes to machine-learning and biomedical-engineering research.", "Serves as a lab instructor and coaches FIRST LEGO League students."] }]
+  },
+  robotics: {
+    title: "CBU Robotics Team", image: "MiscMedia/CBUcompthumbnail2026.png", eyebrow: "Fall 2023 – Present",
+    summary: "Technical leadership across multiple seasons, progressing from senior electrical lead and vice president to president.",
+    skills: ["Technical Leadership", "Robotics", "Team Development", "Systems Integration"], sectionLabel: "The experience", sectionTitle: "Role details",
+    projects: [{ title: "Technical & Team Leadership", image: "Projects/arsenal.png", description: "CBU Robotics brings electrical, mechanical, and software students together to build competition systems under real deadlines. Jason’s role spans technical architecture, team coordination, mentorship, and long-term platform development.", points: ["Led custom electronics, power, sensing, and system-integration work as Senior Electrical Lead.", "Served as Vice President before advancing to President for the 2026 season.", "Mentored team members and coordinated electrical decisions with software and mechanical groups."] }]
+  },
+  bourns: {
+    title: "Bourns, Inc.", image: "MiscMedia/Bourns-bg.jpg", eyebrow: "Engineering Intern · Summer 2024",
+    summary: "Product-development experience focused on circuit-protection applications and high-voltage component packaging.",
+    skills: ["Circuit Protection", "Application Design", "Component Testing", "Technical Documentation"], sectionLabel: "Selected work", sectionTitle: "Bourns projects",
+    projects: [
+      { id: "thermal-protection", label: "Project 01", title: "Thermal Protection Component Application Design", image: "Projects/tco.png", description: "Designed application concepts around thermal protection components, translating electrical and thermal requirements into practical circuit-level solutions.", points: ["Reviewed operating requirements and component behavior.", "Developed circuit concepts for protection use cases.", "Evaluated design tradeoffs and documented findings."] },
+      { id: "high-voltage-packaging", label: "Project 02", title: "High-Voltage Component Packaging", image: "Projects/gdt.png", description: "Explored packaging for high-voltage protection components with attention to electrical isolation, mechanical fit, and a robust final assembly.", points: ["Considered clearance, insulation, and high-voltage constraints.", "Balanced electrical needs with mechanical packaging limits.", "Supported prototype evaluation and design refinement."] }
+    ]
+  },
+  "spacex-dragon": {
+    title: "SpaceX Dragon", image: "Projects/dragon.jpg", eyebrow: "Avionics Engineering Intern · Summer 2025",
+    summary: "Avionics engineering work supporting the electrical systems behind SpaceX’s Dragon spacecraft.",
+    skills: ["Avionics", "Wiring Harness Design", "Schematic Design", "Aerospace Systems"], sectionLabel: "Selected work", sectionTitle: "Dragon projects",
+    projects: [{ id: "dragon-projects", label: "Program work", title: "Dragon Avionics Program Projects", image: "Projects/dragon.jpg", description: "Contributed to avionics engineering projects supporting spacecraft electrical systems and their integration.", points: ["Applied electrical design principles to flight-hardware constraints.", "Supported system interfaces through schematics and harness work.", "Collaborated within a multidisciplinary engineering environment."] }]
+  },
+  "spacex-starshield": {
+    title: "SpaceX Starshield", image: "Projects/Starshield.webp", eyebrow: "Electrical Engineering Intern · Summer 2026",
+    summary: "End-to-end ownership of four prototype flight PCBs, plus two additional PCBs designed to test and validate the prototype flight boards.",
+    skills: ["PCB Design", "Mixed-Signal Design", "High-Speed Interfaces", "Board Bring-Up", "Cross-Functional Engineering"], sectionLabel: "Selected work", sectionTitle: "Starshield projects",
+    note: "Public details are intentionally limited to respect program confidentiality.",
+    projects: [{ id: "starshield-projects", label: "Program work", title: "Prototype Flight PCB Development", image: "Projects/Starshield.webp", description: "Owned prototype flight-board development from architecture and schematic capture through fabrication, bring-up, and validation.", points: ["Designed mixed-signal circuitry with parallel LVDS, SPI, differential I²C, flash-memory interfaces, precision voltage/current references, and power sequencing.", "Coordinated board development with PCB layout, supply chain, PCBA manufacturers, and vendors through fabrication and assembly.", "Partnered with thermal and mechanical teams to address tight thermal-dissipation constraints through component placement, board sizing, connector selection, and high-speed harness selection.", "Designed and laid out two high-speed test-coupon PCBs to validate prototype-board interfaces and reduce development risk.", "Performed board bring-up and functional validation of power, digital communications, high-speed interfaces, and inter-board interconnects.", "Developed low-speed validation software and collaborated with FPGA engineers on high-speed signal-validation test plans."] }]
+  }
 };
+
+function setText(selector, value) {
+  const element = document.querySelector(selector);
+  if (element) element.textContent = value;
+}
+
+function renderProject(project, pageTitle) {
+  const article = document.createElement("article");
+  article.className = "experience-project";
+  if (project.id) article.id = project.id;
+
+  const image = document.createElement("img");
+  image.src = `../${project.image || detailPages[document.body.dataset.page].image}`;
+  image.alt = `${project.title || pageTitle} preview`;
+  image.loading = "lazy";
+
+  const copy = document.createElement("div");
+  if (project.label) {
+    const label = document.createElement("p");
+    label.className = "section-label";
+    label.textContent = project.label;
+    copy.append(label);
+  }
+  const heading = document.createElement("h3");
+  heading.textContent = project.title;
+  const description = document.createElement("p");
+  description.textContent = project.description;
+  const list = document.createElement("ul");
+  project.points.forEach(point => {
+    const item = document.createElement("li");
+    item.textContent = point;
+    list.append(item);
+  });
+  copy.append(heading, description, list);
+  article.append(image, copy);
+  return article;
+}
 
 const page = detailPages[document.body.dataset.page];
 if (page) {
   document.title = `${page.title} | Jason Asariah`;
-  document.querySelector('[data-eyebrow]').textContent = page.eyebrow;
-  document.querySelector('[data-title]').textContent = page.title;
-  document.querySelector('[data-summary]').textContent = page.summary;
-  const image = document.querySelector('[data-image]');
-  image.src = `../${page.image}`;
-  image.alt = `${page.title} preview`;
-  const overview = document.querySelector('[data-overview]');
-  if (overview) overview.textContent = page.overview;
-  const contributions = document.querySelector('[data-contributions]');
-  if (contributions) contributions.innerHTML = page.contributions.map(item => `<li>${item}</li>`).join('');
-  document.querySelector('[data-skills]').innerHTML = page.skills.map(item => `<span>${item}</span>`).join('');
-  const note = document.querySelector('[data-note]');
-  if (page.note && note) { note.textContent = page.note; note.hidden = false; }
-  const related = document.querySelector('[data-related]');
-  if (page.related) {
-    related.innerHTML = `<h2>Related work</h2><div class="related-links">${page.related.map(([label, href]) => `<a href="${href}">${label}<span aria-hidden="true">→</span></a>`).join('')}</div>`;
-    related.hidden = false;
+  setText("[data-eyebrow]", page.eyebrow);
+  setText("[data-title]", page.title);
+  setText("[data-summary]", page.summary);
+  setText("[data-section-label]", page.sectionLabel);
+  setText("[data-section-title]", page.sectionTitle);
+
+  const heroImage = document.querySelector("[data-image]");
+  heroImage.src = `../${page.image}`;
+  heroImage.alt = `${page.title} preview`;
+
+  const skills = document.querySelector("[data-skills]");
+  page.skills.forEach(skill => {
+    const tag = document.createElement("span");
+    tag.textContent = skill;
+    skills.append(tag);
+  });
+
+  const projectList = document.querySelector("[data-project-list]");
+  page.projects.forEach(project => projectList.append(renderProject(project, page.title)));
+
+  const note = document.querySelector("[data-note]");
+  if (page.note) {
+    note.textContent = page.note;
+    note.hidden = false;
   }
-  const source = document.querySelector('[data-source]');
-  if (page.source) { source.href = page.source; source.textContent = page.sourceLabel; source.hidden = false; }
-  const projectList = document.querySelector('[data-project-list]');
-  if (projectList && page.projects) {
-    projectList.innerHTML = page.projects.map(project => `
-      <article class="experience-project" id="${project.id}">
-        <img src="../${project.image}" alt="${project.title} preview" loading="lazy">
-        <div>
-          ${project.label ? `<p class="section-label">${project.label}</p>` : ''}
-          <h3>${project.title}</h3>
-          <p>${project.description}</p>
-          <ul>${project.points.map(point => `<li>${point}</li>`).join('')}</ul>
-        </div>
-      </article>
-    `).join('');
-    projectList.closest('[data-project-section]').hidden = false;
+
+  const source = document.querySelector("[data-source]");
+  if (page.source) {
+    source.href = page.source;
+    source.textContent = page.sourceLabel;
+    source.hidden = false;
   }
 }

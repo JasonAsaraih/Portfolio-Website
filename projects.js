@@ -25,7 +25,7 @@ const projects = [
     tags: ["CBU Robotics"],
     image: "Projects/arsenal.png",
     description: "Custom PCB and electronics system for sensor data acquisition for robot localization.",
-    link: "projects/arsenal-v1.html"
+    link: "experience/robotics.html"
   },
   {
     title: "Quadruped Robot",

@@ -18,25 +18,19 @@ const detailPages = {
     summary: "A four-legged robot developed across its mechanical, electrical, and control layers.",
     source: "https://youtu.be/nQIeAxxUmYM", sourceLabel: "Watch the robot in action!",
     skills: ["C++", "Robotics", "Motor Control", "CAD & Prototyping"], sectionLabel: "The work", sectionTitle: "Project details",
-    projects: [{ title: "Robot Design", description: "Designed mechanical structure, software, and electronics system for quadruped robot.", points: ["Designed mechanical system in Fusion360 and 3D printed componetns.", "Developed motion logic for coordinated leg trajectories and repeatable gait experiments.", "Used iterative testing to identify mechanical limits and improve control behavior."] }]
+    projects: [{ title: "Robot Design", description: "Designed mechanical structure, software, and electronics system for quadruped robot. Each of the four legs have 3 servo motors for precise gate control and balancing.", points: ["Designed mechanical system in Fusion360 and 3D printed componetns.", "Developed software with OOP principles to the behavior and timing of each joint.", "Used iterative testing to identify mechanical limits and tune gate parameters"] }]
   },
   "snake-robot": {
     title: "Snake-Like Robot", image: "Projects/Snake.png", eyebrow: "Personal robotics project",
     summary: "A modular robot that explores locomotion through coordinated, wave-like joint motion.",
     skills: ["Embedded Control", "Kinematics", "Mechanical Design", "Rapid Prototyping"], sectionLabel: "The work", sectionTitle: "Project details",
-    projects: [{ title: "Modular Locomotion System", description: "The robot uses a chain of actuated segments to recreate the body waves that let a snake move through constrained environments. The project required careful coordination between mechanical packaging, wiring, and software timing.", points: ["Built a modular electrical and mechanical architecture that could grow by adding segments.", "Programmed phase-offset joint commands to create smooth locomotion patterns.", "Tested motion parameters and refined the design for dependable movement."] }]
-  },
-  "emg-car": {
-    title: "EMG Controlled Car", image: "Projects/EMG.png", eyebrow: "California Baptist University",
-    summary: "A remote-controlled car driven by electrical activity measured from a user’s muscles.",
-    skills: ["Biomedical Instrumentation", "Signal Processing", "Embedded Systems", "Analog Circuits"], sectionLabel: "The work", sectionTitle: "Project details",
-    projects: [{ title: "Muscle-Signal Control System", description: "The system translates a biological signal into an intuitive vehicle command. Because surface EMG is small and noisy, the project depends on thoughtful electrode placement, analog conditioning, thresholding, and safe control behavior.", points: ["Captured surface EMG signals and conditioned them for dependable measurement.", "Processed muscle activation into discrete vehicle control commands.", "Integrated the sensing, embedded control, and mobile platform into a working demonstration."] }]
+    projects: [{ title: "Robot Design", description: "The robot uses a chain of servo motors to recreate the movement of a snake.", points: ["Built a modular electrical and mechanical architecture that could grow dynamically by adding segments.", "Programmed motor control to generate sinosoidal pattern.", "Tested motion parameters and refined the design for dependable movement."] }]
   },
   "assistive-headset": {
     title: "Headset for the Visually Impaired", image: "Projects/Headset.png", eyebrow: "Personal assistive-technology project",
     summary: "A wearable concept designed to give visually impaired users useful environmental feedback.",
     skills: ["Assistive Technology", "Sensors", "Embedded Design", "Human-Centered Design"], sectionLabel: "The work", sectionTitle: "Project details",
-    projects: [{ title: "Wearable Obstacle Feedback", description: "The headset explores how compact sensing can identify nearby obstacles and communicate them without blocking the user’s hearing or movement. The design prioritizes comfort, clear feedback, and practical real-world use.", points: ["Explored sensor placement and coverage for detecting nearby obstacles.", "Designed an embedded feedback workflow that turns distance information into intuitive cues.", "Balanced electronics packaging with wearability and user-centered constraints."] }]
+    projects: [{ title: "Headset Design", description: "The headset includes a camera and Raspberry Pi Zero to run a TensorFlow Lite model which interfaces with a speaker to describe the surroudnings to the user. The headset also inclueded Tof sensors to provide audio feedback regarding the surroundings to the user as well.", points: ["Explored sensor placement and coverage for detecting nearby obstacles.", "Designed an embedded feedback workflow that turns distance information into intuitive cues.", "Balanced electronics packaging with wearability and user-centered constraints."] }]
   },
   "nlp-tweet-research": {
     title: "NLP and DNNs on Tweet Datasets", image: "Projects/gis.png", eyebrow: "Machine learning research",
@@ -69,8 +63,8 @@ const detailPages = {
     skills: ["Circuit Protection", "Application Design", "Component Testing", "Technical Documentation"], sectionLabel: "Selected work", sectionTitle: "Bourns projects",
     note: "Public details are intentionally limited to respect program confidentiality.",
     projects: [
-      { id: "thermal-protection", label: "Project 01", title: "Thermal Protection Component Application Design", image: "Projects/tco.png", description: "Designed application concepts around thermal protection components, translating electrical and thermal requirements into practical circuit-level solutions.", points: ["Reviewed operating requirements and component behavior.", "Developed circuit concepts for protection use cases.", "Evaluated design tradeoffs and documented findings."] },
-      { id: "high-voltage-packaging", label: "Project 02", title: "High-Voltage Component Packaging", image: "Projects/gdt.png", description: "Explored packaging for high-voltage protection components with attention to electrical isolation, mechanical fit, and a robust final assembly.", points: ["Considered clearance, insulation, and high-voltage constraints.", "Balanced electrical needs with mechanical packaging limits.", "Supported prototype evaluation and design refinement."] }
+      { id: "thermal-protection", label: "Project 01", title: "Thermal Protection Component Application Design", image: "Projects/tco.png", description: "Designed application concepts around bourns thermal protection components while interfacing with potential clients ", points: ["Reviewed operating requirements and component behavior.", "Developed circuit concepts for protection use cases.", "Evaluated design tradeoffs and documented findings."] },
+      { id: "high-voltage-packaging", label: "Project 02", title: "High-Voltage Component Packaging", image: "Projects/gdt.png", description: "Explored packaging for high-voltage protection components with attention to manufacturability, life cycle survival, and reliability.", points: ["Designed small PCBs for potential high voltage package", "Balanced electrical needs with mechanical packaging limits.", "Supported prototype evaluation and design refinement."] }
     ]
   },
   "spacex-dragon": {

@@ -49,13 +49,6 @@ const projects = [
     link: "projects/assistive-headset.html"
   },
   {
-    title: "EMG Controller",
-    tags: ["CBU"],
-    image: "Projects/EMG.png",
-    description: "Developed electromyography (EMG) based control system.",
-    link: "projects/emg-car.html"
-  },
-  {
     title: "Engineering Team Projects",
     tags: ["Bourns"],
     image: "Projects/gdt.png",

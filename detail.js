@@ -3,8 +3,8 @@ const detailPages = {
     title: "CubeSat Project",
     image: "Projects/CubeSat.png",
     eyebrow: "California Baptist University",
-    summary: "A 1U CubeSat avionics effort focused on reliable attitude sensing and power management in a tightly constrained spacecraft.",
-    skills: ["PCB Design", "Power Electronics", "Embedded Systems", "Systems Engineering"],
+    summary: "Working with a cross discplinary team to design school's first 1U CubeSat bus and payload to characterize COTS NVME in low earth orbit.",
+    skills: ["PCB Design", "Schematic Design", "Power Electronics", "Embedded Systems", "Systems Engineering", "Altium"],
     sectionLabel: "The work",
     sectionTitle: "Project details",
     projects: [{
@@ -68,6 +68,7 @@ const detailPages = {
     title: "Bourns, Inc.", image: "MiscMedia/Bourns-bg.jpg", eyebrow: "Engineering Intern · Summer 2024",
     summary: "Product-development experience focused on circuit-protection applications and high-voltage component packaging.",
     skills: ["Circuit Protection", "Application Design", "Component Testing", "Technical Documentation"], sectionLabel: "Selected work", sectionTitle: "Bourns projects",
+    note: "Public details are intentionally limited to respect program confidentiality.",
     projects: [
       { id: "thermal-protection", label: "Project 01", title: "Thermal Protection Component Application Design", image: "Projects/tco.png", description: "Designed application concepts around thermal protection components, translating electrical and thermal requirements into practical circuit-level solutions.", points: ["Reviewed operating requirements and component behavior.", "Developed circuit concepts for protection use cases.", "Evaluated design tradeoffs and documented findings."] },
       { id: "high-voltage-packaging", label: "Project 02", title: "High-Voltage Component Packaging", image: "Projects/gdt.png", description: "Explored packaging for high-voltage protection components with attention to electrical isolation, mechanical fit, and a robust final assembly.", points: ["Considered clearance, insulation, and high-voltage constraints.", "Balanced electrical needs with mechanical packaging limits.", "Supported prototype evaluation and design refinement."] }
@@ -76,13 +77,17 @@ const detailPages = {
   "spacex-dragon": {
     title: "SpaceX Dragon", image: "Projects/dragon.jpg", eyebrow: "Avionics Engineering Intern · Summer 2025",
     summary: "Avionics engineering work supporting the electrical systems behind SpaceX’s Dragon spacecraft.",
-    skills: ["Avionics", "Wiring Harness Design", "Schematic Design", "Aerospace Systems"], sectionLabel: "Selected work", sectionTitle: "Dragon projects",
-    projects: [{ id: "dragon-projects", label: "Program work", title: "Dragon Flight Harness Design", image: "Projects/Inside_Dragon.jpg", description: "Contributed to avionics engineering projects supporting spacecraft electrical systems and their integration.", points: ["Applied electrical design principles to flight-hardware constraints.", "Supported system interfaces through schematics and harness work.", "Collaborated within a multidisciplinary engineering environment."] }]
+    skills: ["Avionics", "Wiring Harness Design", "Schematic Design", "Aerospace Systems", "Altium"], sectionLabel: "Selected work", sectionTitle: "Dragon projects",
+    note: "Public details are intentionally limited to respect program confidentiality.",
+    projects: [
+      { id: "dragon-projects", label: "Program work", title: "Dragon Flight Harness Design", image: "Projects/Inside_Dragon.jpg", description: "Owned the design and development of flight harnesses and heaters for the Dragon spacecraft.", points: ["Designed flight harnesses to interface with various sensors on the Dragon capsule", "Coordinated with mechanical structures teams to ensure proper clearancing", "Worked closely with harness manuacturing teams to discuss manuacturability and reliability of unique sensor harness interfaces", "Created integration plan with launche engineering team to ensure proper harness integration"] },
+      { id: "dragon-projects", label: "Program work", title: "USDV Interface Board", image: "Projects/USDV.jpg", description: "Designed schematic for interface board to test and validate new flight board for the USDV (United States Deorbit Vehicle)", points: ["Designed schematic for interface board with IsoSPI, SPI, and USB", "Designed schematic with testing and validation path forward in mind", "Designed board to withstand flight like thermal envirnment so board would survive qualification campaign with flight board"] }
+    ]
   },
   "spacex-starshield": {
     title: "SpaceX Starshield", image: "Projects/Starshield.webp", eyebrow: "Electrical Engineering Intern · Summer 2026",
     summary: "End-to-end ownership of four prototype flight PCBs, plus two additional PCBs designed to test and validate the prototype flight boards.",
-    skills: ['Electrical Engineering', 'Aerospace Hardware', 'Satellite Electronics', 'High-Speed PCB Design', 'Mixed-Signal Circuit Design', 'High-Speed Digital Interfaces', 'PCB Schematic Design', 'PCB Layout', 'Signal Integrity Validation', 'Board Bring-Up', 'Hardware Validation', 'FPGA Test Collaboration', 'Thermal Design Integration', 'Manufacturing Coordination', 'Systems Integration', 'Design Documentation'], sectionLabel: "Selected work", sectionTitle: "Starshield projects",
+    skills: ['Electrical Engineering', 'Aerospace Hardware', 'Satellite Electronics', 'High-Speed PCB Design', 'Mixed-Signal Circuit Design', 'High-Speed Digital Interfaces', 'PCB Schematic Design', 'PCB Layout', 'Signal Integrity Validation', 'Hardware Validation', 'Manufacturing Coordination'], sectionLabel: "Selected work", sectionTitle: "Starshield projects",
     note: "Public details are intentionally limited to respect program confidentiality.",
     projects: [{ id: "starshield-projects", label: "Program work", title: "Prototype Flight PCB Development", image: "miscmedia/satellite.png", description: "Owned prototype flight-board development from architecture and schematic capture through fabrication, bring-up, and validation.", points: ["Designed mixed-signal circuitry with parallel LVDS, SPI, differential I²C, flash-memory interfaces, precision voltage/current references, and power sequencing.", "Coordinated board development with PCB layout, supply chain, PCBA manufacturers, and vendors through fabrication and assembly.", "Partnered with thermal and mechanical teams to address tight thermal-dissipation constraints through component placement, board sizing, connector selection, and high-speed harness selection.", "Designed and laid out two high-speed test-coupon PCBs to validate prototype-board interfaces and reduce development risk.", "Performed board bring-up and functional validation of power, digital communications, high-speed interfaces, and inter-board interconnects.", "Developed low-speed validation software and collaborated with FPGA engineers on high-speed signal-validation test plans."] }]
   }

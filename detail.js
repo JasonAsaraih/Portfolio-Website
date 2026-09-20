@@ -1,7 +1,7 @@
 const detailPages = {
   cubesat: {
     title: "CubeSat Project",
-    image: "projects/CubeSat.png",
+    image: "Projects/CubeSat.png",
     eyebrow: "California Baptist University",
     summary: "Working with a cross discplinary team to design school's first 1U CubeSat bus and payload to characterize COTS NVMe in low earth orbit.",
     skills: ["PCB Design", "Schematic Design", "Embedded Systems", "Systems Engineering", "Altium"],

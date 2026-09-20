@@ -3,14 +3,14 @@ const detailPages = {
     title: "CubeSat Project",
     image: "projects/cubesat.png",
     eyebrow: "California Baptist University",
-    summary: "Working with a cross discplinary team to design school's first 1U CubeSat bus and payload to characterize COTS NVME in low earth orbit.",
+    summary: "Working with a cross discplinary team to design school's first 1U CubeSat bus and payload to characterize COTS NVMe in low earth orbit.",
     skills: ["PCB Design", "Schematic Design", "Embedded Systems", "Systems Engineering", "Altium"],
     sectionLabel: "The work",
     sectionTitle: "Project details",
     projects: [{
       title: "CubeSat Avionics", image: "miscmedia/adcs.png",
       description: "For this CubeSat project I will be owning the developement of the Attitude Determination and Control System (ADCS) PCBs along with supporting the EE team with bus architecture and system designs. This project has recently been started and is in the preliminary design phase.",
-      points: ["Designing board architecture around the size, power, and reliability constraints of a 1U platform", "Developing bus level trades for star tracking system", "Preliminary design of magentourqers for attitude control"]
+      points: ["Designing board architecture around the size, power, and reliability constraints of a 1U platform", "Developing bus level trades for star tracking system", "Preliminary design of magnetourqers for attitude control"]
     }]
   },
   quadruped: {
@@ -73,8 +73,8 @@ const detailPages = {
     skills: ["Avionics", "Wiring Harness Design", "Schematic Design", "Aerospace Systems", "Altium"], sectionLabel: "Selected work", sectionTitle: "Dragon projects",
     note: "Public details are intentionally limited to respect program confidentiality.",
     projects: [
-      { id: "dragon-projects", label: "Program work", title: "Dragon Flight Harness Design", image: "Projects/Inside_Dragon.jpg", description: "Owned the design and development of flight harnesses and heaters for the Dragon spacecraft.", points: ["Designed flight harnesses to interface with various sensors on the Dragon capsule", "Coordinated with mechanical structures teams to ensure proper clearancing", "Worked closely with harness manuacturing teams to discuss manuacturability and reliability of unique sensor harness interfaces", "Created integration plan with launche engineering team to ensure proper harness integration"] },
-      { id: "dragon-projects", label: "Program work", title: "USDV Interface Board", image: "Projects/USDV.jpg", description: "Designed schematic for interface board to test and validate new flight board for the USDV (United States Deorbit Vehicle)", points: ["Designed schematic for interface board with IsoSPI, SPI, and USB", "Designed schematic with testing and validation path forward in mind", "Designed board to withstand flight like thermal envirnment so board would survive qualification campaign with flight board"] }
+      { id: "dragon-projects", label: "Program work", title: "Dragon Flight Harness Design", image: "Projects/Inside_Dragon.jpg", description: "Owned the design and development of flight harnesses and heaters for the Dragon spacecraft.", points: ["Designed flight harnesses to interface with various sensors on the Dragon capsule", "Coordinated with mechanical structures teams to ensure proper clearance requirements", "Worked closely with harness manufacturing teams to discuss manuacturability and reliability of unique sensor harness interfaces", "Created integration plan with launch engineering team to ensure proper harness integration"] },
+      { id: "dragon-projects", label: "Program work", title: "USDV Interface Board", image: "Projects/USDV.jpg", description: "Designed schematic for interface board to test and validate new flight board for the USDV (United States Deorbit Vehicle)", points: ["Designed schematic for interface board with IsoSPI, SPI, and USB", "Designed schematic with testing and validation path forward in mind", "Designed board to withstand flight like thermal environment so board would survive qualification campaign with flight board"] }
     ]
   },
   "spacex-starshield": {

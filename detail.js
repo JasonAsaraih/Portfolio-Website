@@ -33,11 +33,13 @@ if (page) {
   const image = document.querySelector('[data-image]');
   image.src = `../${page.image}`;
   image.alt = `${page.title} preview`;
-  document.querySelector('[data-overview]').textContent = page.overview;
-  document.querySelector('[data-contributions]').innerHTML = page.contributions.map(item => `<li>${item}</li>`).join('');
+  const overview = document.querySelector('[data-overview]');
+  if (overview) overview.textContent = page.overview;
+  const contributions = document.querySelector('[data-contributions]');
+  if (contributions) contributions.innerHTML = page.contributions.map(item => `<li>${item}</li>`).join('');
   document.querySelector('[data-skills]').innerHTML = page.skills.map(item => `<span>${item}</span>`).join('');
   const note = document.querySelector('[data-note]');
-  if (page.note) { note.textContent = page.note; note.hidden = false; }
+  if (page.note && note) { note.textContent = page.note; note.hidden = false; }
   const related = document.querySelector('[data-related]');
   if (page.related) {
     related.innerHTML = `<h2>Related work</h2><div class="related-links">${page.related.map(([label, href]) => `<a href="${href}">${label}<span aria-hidden="true">→</span></a>`).join('')}</div>`;

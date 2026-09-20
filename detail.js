@@ -1,14 +1,14 @@
 const detailPages = {
   cubesat: {
     title: "CubeSat Project",
-    image: "projects/cubesat.png",
+    image: "projects/CubeSat.png",
     eyebrow: "California Baptist University",
     summary: "Working with a cross discplinary team to design school's first 1U CubeSat bus and payload to characterize COTS NVMe in low earth orbit.",
     skills: ["PCB Design", "Schematic Design", "Embedded Systems", "Systems Engineering", "Altium"],
     sectionLabel: "The work",
     sectionTitle: "Project details",
     projects: [{
-      title: "CubeSat Avionics", image: "miscmedia/adcs.png",
+      title: "CubeSat Avionics", image: "MiscMedia/ADCS.png",
       description: "For this CubeSat project I will be owning the developement of the Attitude Determination and Control System (ADCS) PCBs along with supporting the EE team with bus architecture and system designs. This project has recently been started and is in the preliminary design phase.",
       points: ["Designing board architecture around the size, power, and reliability constraints of a 1U platform", "Developing bus level trades for star tracking system", "Preliminary design of magnetourqers for attitude control"]
     }]
